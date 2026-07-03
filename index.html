@@ -33,7 +33,6 @@
             transform: translateY(0);
         }
         
-        /* CSS pour le bandeau défilant (Tech Stack) */
         .scroller-mask {
             -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
             mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
@@ -69,34 +68,34 @@
     </nav>
 
     <header id="about" class="min-h-screen flex items-center pt-20 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 w-full flex flex-col md:flex-row items-center gap-12 md:gap-20 reveal">
+        <div class="max-w-7xl mx-auto px-4 w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-16 reveal">
             
-            <div class="w-full md:w-5/12 flex justify-center md:justify-end relative">
-                <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-3xl blur-3xl opacity-20 dark:opacity-30 animate-pulse w-64 h-80 md:w-80 md:h-[28rem] m-auto"></div>
+            <div class="w-full lg:w-4/12 flex justify-center lg:justify-start relative lg:pl-4">
+                <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-3xl blur-3xl opacity-20 dark:opacity-30 animate-pulse w-64 h-80 md:w-80 md:h-[28rem] m-auto lg:m-0"></div>
                 <img src="Photo de Profil.png" alt="Arthur Louette" class="relative z-10 w-64 h-80 md:w-80 md:h-[28rem] rounded-3xl object-cover shadow-2xl border-8 border-white dark:border-slate-800">
             </div>
 
-            <div class="w-full md:w-7/12 text-center md:text-left bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm">
+            <div class="w-full lg:w-8/12 text-center lg:text-left bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm">
                 <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-slate-800 dark:text-white">
-                    Arthur <br class="hidden md:block"/><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Louette</span>
+                    Arthur <br class="hidden lg:block"/><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Louette</span>
                 </h1>
                 <h2 class="text-2xl text-slate-600 dark:text-slate-300 font-medium mb-6">Computer Science & AI Master's Student</h2>
-                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto md:mx-0">
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0">
                     Passionné par l'intelligence artificielle, la finance et le développement d'outils concrets. De l'implémentation de modèles ML à la création d'applications natives macOS et web.
                 </p>
                 
-                <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="CV.pdf" download class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition flex items-center gap-2">
-                        <i class="fa-solid fa-file-arrow-down text-xl"></i> Télécharger CV
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                    <a href="CV.pdf" download class="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition flex items-center gap-2 whitespace-nowrap text-sm md:text-base">
+                        <i class="fa-solid fa-file-arrow-down text-lg"></i> Télécharger CV
                     </a>
-                    <a href="https://github.com/Arthvrr" target="_blank" class="bg-slate-900 dark:bg-slate-700 text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-slate-800 dark:hover:bg-slate-600 transition flex items-center gap-2">
-                        <i class="fa-brands fa-github text-xl"></i> GitHub
+                    <a href="https://github.com/Arthvrr" target="_blank" class="bg-slate-900 dark:bg-slate-700 text-white px-5 py-2.5 rounded-lg font-medium shadow-lg hover:bg-slate-800 dark:hover:bg-slate-600 transition flex items-center gap-2 whitespace-nowrap text-sm md:text-base">
+                        <i class="fa-brands fa-github text-lg"></i> GitHub
                     </a>
-                    <a href="https://www.linkedin.com/in/arthurlouette/" target="_blank" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 px-6 py-3 rounded-lg font-medium shadow-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition flex items-center gap-2">
-                        <i class="fa-brands fa-linkedin text-xl"></i> LinkedIn
+                    <a href="https://www.linkedin.com/in/arthurlouette/" target="_blank" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 px-5 py-2.5 rounded-lg font-medium shadow-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition flex items-center gap-2 whitespace-nowrap text-sm md:text-base">
+                        <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn
                     </a>
-                    <a href="mailto:arthurlouette12@gmail.com" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 px-6 py-3 rounded-lg font-medium shadow-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition flex items-center gap-2">
-                        <i class="fa-solid fa-envelope text-xl"></i> Email
+                    <a href="mailto:arthurlouette12@gmail.com" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 px-5 py-2.5 rounded-lg font-medium shadow-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition flex items-center gap-2 whitespace-nowrap text-sm md:text-base">
+                        <i class="fa-solid fa-envelope text-lg"></i> Email
                     </a>
                 </div>
             </div>
@@ -115,6 +114,7 @@
                 <span>Tailwind</span>
                 <span>Machine Learning</span>
                 <span class="flex items-center gap-2"><i class="fa-brands fa-git-alt"></i> Git</span>
+                
                 <span class="flex items-center gap-2"><i class="fa-brands fa-swift"></i> Swift/macOS</span>
                 <span class="flex items-center gap-2"><i class="fa-brands fa-python"></i> Python</span>
                 <span class="flex items-center gap-2"><i class="fa-brands fa-js"></i> JavaScript</span>
@@ -294,7 +294,8 @@
                     <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Padoue, Italie | Septembre 2026 - Février 2027</p>
                     <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
                         <li>Mobilité internationale axée sur l'Intelligence Artificielle.</li>
-                        <li>Immersion multiculturelle et perfectionnement de l'anglais technique.</li>
+                        <li>Développement d'une forte capacité d'adaptation et de collaboration au sein d'équipes multiculturelles et internationales.</li>
+                        <li>Perfectionnement de l'anglais technique et professionnel.</li>
                     </ul>
                 </div>
 
@@ -302,7 +303,7 @@
                     <div class="absolute -left-[37px] top-1 h-4 w-4 rounded-full bg-indigo-500 ring-4 ring-indigo-50 dark:ring-indigo-900/70"></div>
                     <h3 class="text-xl font-bold text-slate-800 dark:text-white">École Polytechnique de Louvain (UCLouvain)</h3>
                     <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Master [120] en Sciences Informatiques | Intelligence Artificielle</p>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Septembre 2025 - Présent</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Septembre 2025 - Juin 2027</p>
                     <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
                         <li>Spécialisation : Machine Learning, Big Data, Optimisation et Programmation par Contraintes.</li>
                         <li>Formation 100% en anglais combinant conception de systèmes complexes, innovation et "soft skills".</li>
@@ -333,12 +334,12 @@
                     <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-600 ring-4 ring-blue-100 dark:ring-blue-900"></div>
                     <h3 class="text-xl font-bold text-slate-800 dark:text-white">Stage de Mémoire - BNP Paribas Fortis</h3>
                     <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Bruxelles | Mars 2027 - Juin 2027</p>
-                    <p class="text-slate-600 dark:text-slate-300">Recherche et développement autour de l'amélioration des réponses des modèles d'IA par l'implémentation de méthodes de calibration pour la classification supervisée.</p>
+                    <p class="text-slate-600 dark:text-slate-300">Recherche et développement autour de l'amélioration des réponses des modèles d'IA par l'implémentation de méthodes de calibration pour la classification supervisée. Immersion dans l'écosystème bancaire institutionnel et résolution de problématiques d'IA complexes.</p>
                 </div>
 
                 <div class="relative">
                     <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-blue-50 dark:ring-blue-900/50"></div>
-                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">R&D Systems Engineer (Student) - UCLouvain</h3>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Ingénieur Systèmes Assistant - UCLouvain</h3>
                     <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | Juillet 2026 - Août 2026</p>
                     <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
                         <li>Portage du système de programmation Mozart 2 de l'architecture Intel (x86_64) vers Apple Silicon (ARM64).</li>
@@ -348,7 +349,7 @@
 
                 <div class="relative">
                     <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-400 ring-4 ring-blue-50 dark:ring-blue-900/50"></div>
-                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Student Teaching Assistant - UCLouvain</h3>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Étudiant Tuteur - UCLouvain</h3>
                     <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | Janvier 2026 - Juin 2026</p>
                     <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
                         <li>Accompagnement des étudiants dans la création de sites web (HTML/CSS, Flask, bases de données SQL).</li>
@@ -358,7 +359,7 @@
 
                 <div class="relative">
                     <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-300 ring-4 ring-blue-50 dark:ring-blue-900/50"></div>
-                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Investment Club Member - LSM</h3>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Membre d'un Club d'Investissement - LSM</h3>
                     <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | Septembre 2025 - Mars 2026</p>
                     <p class="text-slate-600 dark:text-slate-300">Gestion active d'un portefeuille d'actions valorisé à plus de 25 000 € et création de contenu visuel pour les réseaux du club.</p>
                 </div>
