@@ -43,9 +43,9 @@
             <span class="font-bold text-xl tracking-tight text-blue-600 dark:text-blue-400">AL.</span>
             <div class="flex items-center gap-6 text-sm font-medium">
                 <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">À propos</a>
+                <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Projets</a>
                 <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Formations</a>
                 <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Expériences</a>
-                <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Projets</a>
                 
                 <button id="theme-toggle" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none rounded-lg text-sm p-2.5 transition-colors">
                     <i id="theme-toggle-dark-icon" class="fa-solid fa-moon hidden text-lg"></i>
@@ -85,11 +85,153 @@
                     </a>
                 </div>
             </div>
-            
         </div>
     </header>
 
-    <section id="education" class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800">
+    <section id="projects" class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-16 text-center text-slate-800 dark:text-white reveal">Projets Personnels</h2>
+            
+            <div class="space-y-24">
+                
+                <div class="flex flex-col md:flex-row items-center gap-12 reveal">
+                    <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800">
+                        <img src="Intrinsic/image1.png" alt="Intrinsic App 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img">
+                        <img src="Intrinsic/image2.png" alt="Intrinsic App 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                        <img src="Intrinsic/image3.png" alt="Intrinsic App 3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="flex items-center gap-4 mb-4">
+                            <h3 class="text-3xl font-bold text-slate-800 dark:text-white">Intrinsic</h3>
+                            <a href="https://intrinsic-app.eu" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+                        </div>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                            Application native macOS automatisant la valorisation d'actions via des modèles DCF. L'outil intègre des APIs en temps réel (Finnhub, ExchangeRate) avec du multithreading pour générer des analyses de scénarios boursiers et des visualisations de données interactives.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">SwiftUI & XCode</span>
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">APIs REST</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 reveal">
+                    <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800">
+                        <img src="Bloc.us/image1.png" alt="Bloc.us 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img">
+                        <img src="Bloc.us/image2.png" alt="Bloc.us 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                        <img src="Bloc.us/image3.png" alt="Bloc.us 3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                        <img src="Bloc.us/image4.png" alt="Bloc.us 3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-4">Bloc.us</h3>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                            Outil de productivité natif macOS spécialement conçu pour les étudiants. L'application permet de structurer efficacement les périodes de "blocus", d'intégrer des timers de concentration et de suivre sa progression académique sur l'année.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">Swift</span>
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">macOS Native</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-12 reveal">
+                    <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800">
+                        <img src="MyRAG/image1.png" alt="MyRAG 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img">
+                        <img src="MyRAG/image2.png" alt="MyRAG 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="flex items-center gap-4 mb-4">
+                            <h3 class="text-3xl font-bold text-slate-800 dark:text-white">MyRAG</h3>
+                            <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300"><i class="fa-brands fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                            Développement d'un assistant conversationnel IA local. Basé sur l'architecture Retrieval-Augmented Generation (RAG), il permet l'indexation et l'interrogation précise de bases de connaissances et de documents personnels, de manière 100% privée.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-sm font-semibold">Python & LangChain</span>
+                            <span class="px-4 py-2 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-sm font-semibold">Ollama (Llama 3)</span>
+                            <span class="px-4 py-2 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-sm font-semibold">ChromaDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 reveal">
+                    <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800">
+                        <img src="BlueChip/image1.png" alt="BlueChip 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img">
+                        <img src="BlueChip/image2.png" alt="BlueChip 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-4">BlueChip</h3>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                            Une interface web pensée pour le suivi de portefeuilles boursiers (évolution du projet StocksPickeur). Alliant mon intérêt pour la finance et le développement web, l'outil permet d'analyser et de tracker les performances de ses investissements.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 rounded-lg text-sm font-semibold">Web Fullstack</span>
+                            <span class="px-4 py-2 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 rounded-lg text-sm font-semibold">FinanceTech</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-12 reveal">
+                    <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800">
+                        <img src="MyTOB/image1.png" alt="MyTOB 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img">
+                        <img src="MyTOB/image2.png" alt="MyTOB 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="flex items-center gap-4 mb-4">
+                            <h3 class="text-3xl font-bold text-slate-800 dark:text-white">MyTOB.be</h3>
+                            <a href="https://mytob.be" target="_blank" class="text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+                        </div>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                            Application web conçue pour automatiser une tâche fiscale complexe pour les investisseurs belges : le calcul et la génération automatique du PDF pour la déclaration de la Taxe sur les Opérations de Bourse (TOB).
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-sm font-semibold">JavaScript</span>
+                            <span class="px-4 py-2 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-sm font-semibold">Génération PDF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 reveal">
+                    <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800">
+                        <img src="Plot/image1.png" alt="Plot 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img">
+                        <img src="Plot/image2.png" alt="Plot 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-4">Plot</h3>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                            Outil web performant axé sur la Data Visualisation. Il permet de générer des graphiques interactifs modernes, personnalisables et exportables en haute définition. Concentré sur la fonctionnalité pure, sans surcharges stylistiques.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-sm font-semibold">JavaScript</span>
+                            <span class="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-sm font-semibold">ApexCharts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-12 reveal">
+                    <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800">
+                        <img src="Azimut/image1.png" alt="Azimut 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img">
+                        <img src="Azimut/image2.png" alt="Azimut 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                        <img src="Azimut/image3.png" alt="Azimut 3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-4">Azimut</h3>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                            Engagement associatif et gestion de projets dans le cadre du scoutisme. Organisation complète de grands rassemblements thématiques pour les jeunes (ex: conception scénaristique d'un camp médiéval "Rêver des neuf royaumes"), prouvant des capacités de leadership, de logistique et de créativité.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-sm font-semibold">Leadership & Gestion</span>
+                            <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-sm font-semibold">Travail d'équipe</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-24 bg-slate-50 dark:bg-slate-800/30 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-4 reveal">
             <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 dark:text-white">Formations</h2>
             <div class="space-y-10 border-l-2 border-indigo-200 dark:border-indigo-900 pl-6 ml-4">
@@ -99,9 +241,10 @@
                     <h3 class="text-xl font-bold text-slate-800 dark:text-white">Università degli Studi di Padova</h3>
                     <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Échange Erasmus+</p>
                     <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Padoue, Italie | Septembre 2026 - Février 2027</p>
-                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-                        Mobilité internationale dans le cadre de mon Master. L'objectif est double : découvrir de nouvelles approches académiques dans le domaine de l'IA au sein d'un environnement multiculturel, et parfaire ma maîtrise de l'anglais (technique et conversationnel) pour me préparer efficacement à une carrière d'envergure internationale.
-                    </p>
+                    <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
+                        <li>Mobilité internationale axée sur l'Intelligence Artificielle.</li>
+                        <li>Immersion multiculturelle et perfectionnement de l'anglais technique.</li>
+                    </ul>
                 </div>
 
                 <div class="relative">
@@ -109,11 +252,10 @@
                     <h3 class="text-xl font-bold text-slate-800 dark:text-white">École Polytechnique de Louvain (UCLouvain)</h3>
                     <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Master [120] en Sciences Informatiques | Intelligence Artificielle</p>
                     <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Septembre 2024 - Présent</p>
-                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-                        Formation dispensée entièrement en anglais, offrant un équilibre pointu entre excellence scientifique et pragmatisme de terrain ("soft skills", gestion de ressources, éthique). Ce master me prépare à imaginer, concevoir et déployer des systèmes complexes. 
-                        <br><span class="block mt-2 font-medium text-slate-700 dark:text-slate-200">Spécialisation :</span> 
-                        Approfondissement des connaissances théoriques et techniques en Intelligence Artificielle (Machine Learning, Big Data, Optimisation et Programmation par Contraintes), visant à innover avec une attention particulière à la qualité du produit logiciel.
-                    </p>
+                    <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
+                        <li>Spécialisation : Machine Learning, Big Data, Optimisation et Programmation par Contraintes.</li>
+                        <li>Formation 100% en anglais combinant conception de systèmes complexes, innovation et "soft skills".</li>
+                    </ul>
                 </div>
 
                 <div class="relative">
@@ -121,16 +263,17 @@
                     <h3 class="text-xl font-bold text-slate-800 dark:text-white">École Polytechnique de Louvain (UCLouvain)</h3>
                     <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Bachelier en Sciences Informatiques</p>
                     <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Septembre 2021 - Juin 2024</p>
-                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-                        Acquisition des fondements théoriques et mathématiques nécessaires à la conception d'applications informatiques sécurisées et intelligentes. Développement d'une forte aptitude à l'abstraction, au raisonnement logique et à l'analyse de problèmes complexes. Cette formation pluridisciplinaire m'a également permis d'aborder la gestion d'équipe et de comprendre les enjeux économiques transversaux aux technologies de l'information.
-                    </p>
+                    <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
+                        <li>Acquisition des fondements théoriques, algorithmiques et mathématiques de l'informatique.</li>
+                        <li>Développement de l'abstraction logique, analyse de problèmes complexes et gestion de projets en équipe.</li>
+                    </ul>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-24 bg-slate-50 dark:bg-slate-800/30 transition-colors duration-300">
+    <section id="experience" class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-4 reveal">
             <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 dark:text-white">Expériences</h2>
             <div class="space-y-8 border-l-2 border-blue-200 dark:border-blue-900 pl-6 ml-4">
@@ -173,64 +316,13 @@
         </div>
     </section>
 
-    <section id="projects" class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 dark:text-white reveal">Projets Personnels</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <div class="group border border-slate-100 dark:border-slate-700 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50 dark:bg-slate-800">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-slate-800 dark:text-white">Intrinsic</h3>
-                        <a href="https://intrinsic-app.eu" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-300 mb-4">Application native macOS automatisant la valorisation d'actions (modèles DCF). Intégration d'APIs en temps réel pour générer des analyses de scénarios et des visualisations interactives.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold">SwiftUI</span>
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold">APIs (Finnhub)</span>
-                    </div>
-                </div>
-
-                <div class="group border border-slate-100 dark:border-slate-700 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50 dark:bg-slate-800">
-                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Bloc.us</h3>
-                    <p class="text-slate-600 dark:text-slate-300 mb-4">Application macOS native conçue pour aider les étudiants à structurer leurs périodes de blocus de manière optimale et à suivre efficacement leur progression académique.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold">Swift</span>
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold">macOS Native</span>
-                    </div>
-                </div>
-
-                <div class="group border border-slate-100 dark:border-slate-700 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50 dark:bg-slate-800">
-                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Plot</h3>
-                    <p class="text-slate-600 dark:text-slate-300 mb-4">Outil web de visualisation de données générant des graphiques modernes et exportables en très haute définition, propulsé par des librairies avancées.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-xs font-semibold">JavaScript</span>
-                        <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-xs font-semibold">ApexCharts</span>
-                    </div>
-                </div>
-
-                <div class="group border border-slate-100 dark:border-slate-700 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50 dark:bg-slate-800">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-slate-800 dark:text-white">MyRAG</h3>
-                        <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"><i class="fa-brands fa-github text-xl"></i></a>
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-300 mb-4">Assistant conversationnel IA local basé sur l'architecture Retrieval-Augmented Generation pour l'indexation et l'interrogation de documents personnels.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-semibold">Python</span>
-                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-semibold">Llama 3 / ChromaDB</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 text-slate-400 py-12 text-center transition-colors duration-300">
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center transition-colors duration-300 border-t border-slate-800">
         <p>© 2026 Arthur Louette. Tous droits réservés.</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- Logique d'Animation au Scroll ---
+            // --- Logique d'Animation au Scroll (Reveal) ---
             const reveals = document.querySelectorAll('.reveal');
             const revealOnScroll = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -244,25 +336,42 @@
             });
             reveals.forEach(reveal => revealOnScroll.observe(reveal));
 
+            // --- Logique du Carrousel d'Images (Slider) ---
+            const sliders = document.querySelectorAll('.slider-container');
+            sliders.forEach(slider => {
+                const images = slider.querySelectorAll('.slider-img');
+                if (images.length > 1) {
+                    let currentIndex = 0;
+                    setInterval(() => {
+                        // Cacher l'image actuelle
+                        images[currentIndex].classList.remove('opacity-100');
+                        images[currentIndex].classList.add('opacity-0');
+                        
+                        // Passer à l'image suivante
+                        currentIndex = (currentIndex + 1) % images.length;
+                        
+                        // Afficher la nouvelle image
+                        images[currentIndex].classList.remove('opacity-0');
+                        images[currentIndex].classList.add('opacity-100');
+                    }, 3000); // 3000 millisecondes = 3 secondes
+                }
+            });
+
             // --- Logique du Dark / Light Mode ---
             const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
             const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
             const themeToggleBtn = document.getElementById('theme-toggle');
 
-            // Afficher la bonne icône au chargement
             if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 themeToggleLightIcon.classList.remove('hidden');
             } else {
                 themeToggleDarkIcon.classList.remove('hidden');
             }
 
-            // Écouter les clics sur le bouton
             themeToggleBtn.addEventListener('click', function() {
-                // Basculer les icônes
                 themeToggleDarkIcon.classList.toggle('hidden');
                 themeToggleLightIcon.classList.toggle('hidden');
 
-                // Si on a déjà une préférence dans le localStorage
                 if (localStorage.getItem('color-theme')) {
                     if (localStorage.getItem('color-theme') === 'light') {
                         document.documentElement.classList.add('dark');
@@ -271,7 +380,6 @@
                         document.documentElement.classList.remove('dark');
                         localStorage.setItem('color-theme', 'light');
                     }
-                // S'il n'y a pas de préférence, on vérifie via le système de l'OS
                 } else {
                     if (document.documentElement.classList.contains('dark')) {
                         document.documentElement.classList.remove('dark');
