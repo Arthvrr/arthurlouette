@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,7 @@
             transform: translateY(0);
         }
         
-        /* CSS pour le bandeau défilant (Tech Stack) */
+        /* CSS for the Tech Stack Scroller */
         .scroller-mask {
             -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
             mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
@@ -54,11 +54,11 @@
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <span class="font-bold text-xl tracking-tight text-blue-600 dark:text-blue-400">AL.</span>
             <div class="flex items-center gap-6 text-sm font-medium">
-                <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">À propos</a>
-                <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Projets</a>
-                <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Formations</a>
-                <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Expériences</a>
-                <a href="index_en.html" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300 hover:text-blue-600 transition">EN</a>
+                <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">About</a>
+                <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Projects</a>
+                <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Education</a>
+                <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Experience</a>
+                <a href="index.html" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300 hover:text-blue-600 transition">FR</a>
                 
                 <button id="theme-toggle" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none rounded-lg text-sm p-2.5 transition-colors">
                     <i id="theme-toggle-dark-icon" class="fa-solid fa-moon hidden text-lg"></i>
@@ -82,12 +82,12 @@
                 </h1>
                 <h2 class="text-2xl text-slate-600 dark:text-slate-300 font-medium mb-6">Computer Science & AI Master's Student</h2>
                 <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto md:mx-0">
-                    Passionné par l'intelligence artificielle, la finance et le développement d'outils concrets. De l'implémentation de modèles ML à la création d'applications natives macOS et web.
+                    Passionate about artificial intelligence, finance, and building concrete tools. From implementing ML models to creating native macOS and web applications.
                 </p>
                 
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
                     <a href="CV.pdf" download class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition flex items-center gap-2">
-                        <i class="fa-solid fa-file-arrow-down text-xl"></i> Télécharger CV
+                        <i class="fa-solid fa-file-arrow-down text-xl"></i> Download Resume
                     </a>
                     <a href="https://github.com/Arthvrr" target="_blank" class="bg-slate-900 dark:bg-slate-700 text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-slate-800 dark:hover:bg-slate-600 transition flex items-center gap-2">
                         <i class="fa-brands fa-github text-xl"></i> GitHub
@@ -115,6 +115,7 @@
                 <span>Tailwind</span>
                 <span>Machine Learning</span>
                 <span class="flex items-center gap-2"><i class="fa-brands fa-git-alt"></i> Git</span>
+                
                 <span class="flex items-center gap-2"><i class="fa-brands fa-swift"></i> Swift/macOS</span>
                 <span class="flex items-center gap-2"><i class="fa-brands fa-python"></i> Python</span>
                 <span class="flex items-center gap-2"><i class="fa-brands fa-js"></i> JavaScript</span>
@@ -130,7 +131,7 @@
 
     <section id="projects" class="py-24 bg-slate-50 dark:bg-slate-800/30 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800 overflow-hidden">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-16 text-center text-slate-800 dark:text-white reveal">Projets Personnels</h2>
+            <h2 class="text-3xl font-bold mb-16 text-center text-slate-800 dark:text-white reveal">Personal Projects</h2>
             
             <div class="space-y-24">
                 
@@ -150,11 +151,11 @@
                             <a href="https://intrinsic-app.eu" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
                         </div>
                         <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Application native macOS automatisant la valorisation d'actions via des modèles DCF. L'outil intègre des APIs en temps réel (Finnhub, ExchangeRate) avec du multithreading pour générer des analyses de scénarios boursiers et des visualisations de données interactives.
+                            Native macOS application automating stock valuation via DCF models. The tool integrates real-time APIs (Finnhub, ExchangeRate) with multithreading to generate stock scenario analyses and interactive data visualizations.
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">SwiftUI & XCode</span>
-                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">APIs REST</span>
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">REST APIs</span>
                         </div>
                     </div>
                 </div>
@@ -175,7 +176,7 @@
                             <a href="https://arthvrr.github.io/Bloc.us/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
                         </div>
                         <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Outil de productivité natif macOS spécialement conçu pour les étudiants. L'application permet de structurer efficacement les périodes de "blocus", d'intégrer des timers de concentration et de suivre sa progression académique sur l'année.
+                            Native macOS productivity tool specifically designed for students. The application helps structure study periods effectively, integrates focus timers, and tracks academic progress throughout the year.
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">Swift</span>
@@ -197,7 +198,7 @@
                     <div class="w-full md:w-1/2">
                         <h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-4">Azimut</h3>
                         <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Plateforme SaaS (Progressive Web App) conçue pour la gestion administrative et communicationnelle des unités scoutes. Centralisation de documents avec purge automatisée (Smart Rollover), agenda interactif, et envois d'e-mails ciblés. Architecture multi-rôles garantissant le cloisonnement strict des données (RGPD).
+                            SaaS platform (Progressive Web App) designed for the administrative and communication management of scout units. Features include document centralization with automated purge (Smart Rollover), interactive agenda, and targeted emails. Multi-role architecture ensuring strict data isolation (GDPR compliant).
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-sm font-semibold">Python (FastAPI)</span>
@@ -223,7 +224,7 @@
                             <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300"><i class="fa-brands fa-github text-xl"></i></a>
                         </div>
                         <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Développement d'un assistant conversationnel IA local. Basé sur l'architecture Retrieval-Augmented Generation (RAG), il permet l'indexation et l'interrogation précise de bases de connaissances et de documents personnels, de manière 100% privée.
+                            Development of a local AI conversational assistant. Based on the Retrieval-Augmented Generation (RAG) architecture, it enables indexing and precise querying of personal knowledge bases and documents, ensuring 100% privacy.
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-4 py-2 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-sm font-semibold">Python & LangChain</span>
@@ -245,10 +246,10 @@
                     <div class="w-full md:w-1/2">
                         <h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-4">BlueChip</h3>
                         <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Une interface web pensée pour le suivi de portefeuilles boursiers (évolution du projet StocksPickeur). Alliant mon intérêt pour la finance et le développement web, l'outil permet d'analyser et de tracker les performances de ses investissements.
+                            A web interface designed for tracking stock portfolios (evolution of the StocksPickeur project). Combining my interest in finance and web development, the tool allows users to analyze and track investment performances.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 rounded-lg text-sm font-semibold">Web Fullstack</span>
+                            <span class="px-4 py-2 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 rounded-lg text-sm font-semibold">Fullstack Web</span>
                             <span class="px-4 py-2 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 rounded-lg text-sm font-semibold">FinanceTech</span>
                         </div>
                     </div>
@@ -269,11 +270,11 @@
                             <a href="https://mytob.be" target="_blank" class="text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
                         </div>
                         <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Application web conçue pour automatiser une tâche fiscale complexe pour les investisseurs belges : le calcul et la génération automatique du PDF pour la déclaration de la Taxe sur les Opérations de Bourse (TOB).
+                            Web application designed to automate a complex tax task for Belgian investors: the calculation and automatic PDF generation for the Tax on Stock Exchange Transactions (TOB) declaration.
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-4 py-2 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-sm font-semibold">JavaScript</span>
-                            <span class="px-4 py-2 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-sm font-semibold">Génération PDF</span>
+                            <span class="px-4 py-2 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-sm font-semibold">PDF Generation</span>
                         </div>
                     </div>
                 </div>
@@ -284,39 +285,39 @@
 
     <section id="education" class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-4 reveal">
-            <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 dark:text-white">Formations</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 dark:text-white">Education</h2>
             <div class="space-y-10 border-l-2 border-indigo-200 dark:border-indigo-900 pl-6 ml-4">
                 
                 <div class="relative">
                     <div class="absolute -left-[37px] top-1 h-4 w-4 rounded-full bg-indigo-600 ring-4 ring-indigo-100 dark:ring-indigo-900"></div>
                     <h3 class="text-xl font-bold text-slate-800 dark:text-white">Università degli Studi di Padova</h3>
-                    <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Échange Erasmus+</p>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Padoue, Italie | Septembre 2026 - Février 2027</p>
+                    <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Erasmus+ Exchange Program</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Padua, Italy | September 2026 - February 2027</p>
                     <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                        <li>Mobilité internationale axée sur l'Intelligence Artificielle.</li>
-                        <li>Immersion multiculturelle et perfectionnement de l'anglais technique.</li>
+                        <li>International mobility focused on Artificial Intelligence.</li>
+                        <li>Multicultural immersion and technical English proficiency improvement.</li>
                     </ul>
                 </div>
 
                 <div class="relative">
                     <div class="absolute -left-[37px] top-1 h-4 w-4 rounded-full bg-indigo-500 ring-4 ring-indigo-50 dark:ring-indigo-900/70"></div>
-                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">École Polytechnique de Louvain (UCLouvain)</h3>
-                    <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Master [120] en Sciences Informatiques | Intelligence Artificielle</p>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Septembre 2025 - Présent</p>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Louvain School of Engineering (UCLouvain)</h3>
+                    <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Master [120] in Computer Science | Artificial Intelligence</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">September 2025 - Present</p>
                     <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                        <li>Spécialisation : Machine Learning, Big Data, Optimisation et Programmation par Contraintes.</li>
-                        <li>Formation 100% en anglais combinant conception de systèmes complexes, innovation et "soft skills".</li>
+                        <li>Specialization: Machine Learning, Big Data, Optimization, and Constraint Programming.</li>
+                        <li>100% English-taught program combining complex systems design, innovation, and soft skills.</li>
                     </ul>
                 </div>
 
                 <div class="relative">
                     <div class="absolute -left-[37px] top-1 h-4 w-4 rounded-full bg-indigo-400 ring-4 ring-indigo-50 dark:ring-indigo-900/40"></div>
-                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">École Polytechnique de Louvain (UCLouvain)</h3>
-                    <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Bachelier en Sciences Informatiques</p>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Septembre 2021 - Juin 2025</p>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Louvain School of Engineering (UCLouvain)</h3>
+                    <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Bachelor in Computer Science</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">September 2021 - June 2025</p>
                     <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                        <li>Acquisition des fondements théoriques, algorithmiques et mathématiques de l'informatique.</li>
-                        <li>Développement de l'abstraction logique, analyse de problèmes complexes et gestion de projets en équipe.</li>
+                        <li>Acquisition of theoretical, algorithmic, and mathematical foundations in computer science.</li>
+                        <li>Development of logical abstraction, complex problem analysis, and team project management.</li>
                     </ul>
                 </div>
 
@@ -326,41 +327,41 @@
 
     <section id="experience" class="py-24 bg-slate-50 dark:bg-slate-800/30 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-4 reveal">
-            <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 dark:text-white">Expériences</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 dark:text-white">Experience</h2>
             <div class="space-y-8 border-l-2 border-blue-200 dark:border-blue-900 pl-6 ml-4">
                 
                 <div class="relative">
                     <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-600 ring-4 ring-blue-100 dark:ring-blue-900"></div>
-                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Stage de Mémoire - BNP Paribas Fortis</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Bruxelles | Mars 2027 - Juin 2027</p>
-                    <p class="text-slate-600 dark:text-slate-300">Recherche et développement autour de l'amélioration des réponses des modèles d'IA par l'implémentation de méthodes de calibration pour la classification supervisée.</p>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Master's Thesis Internship - BNP Paribas Fortis</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Brussels | March 2027 - June 2027</p>
+                    <p class="text-slate-600 dark:text-slate-300">Research and development focused on improving AI model responses by implementing calibration methods for supervised classification.</p>
                 </div>
 
                 <div class="relative">
                     <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-blue-50 dark:ring-blue-900/50"></div>
                     <h3 class="text-xl font-bold text-slate-800 dark:text-white">R&D Systems Engineer (Student) - UCLouvain</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | Juillet 2026 - Août 2026</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | July 2026 - August 2026</p>
                     <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                        <li>Portage du système de programmation Mozart 2 de l'architecture Intel (x86_64) vers Apple Silicon (ARM64).</li>
-                        <li>Résolution de conflits de dépendances C++ bas niveau et configuration de pipelines de compilation (Make, LLVM).</li>
+                        <li>Ported the legacy Mozart 2 programming system from Intel (x86_64) to Apple Silicon (ARM64) architecture.</li>
+                        <li>Diagnosed and resolved low-level C++ dependency conflicts and configured advanced compilation pipelines (Make, LLVM).</li>
                     </ul>
                 </div>
 
                 <div class="relative">
                     <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-400 ring-4 ring-blue-50 dark:ring-blue-900/50"></div>
                     <h3 class="text-xl font-bold text-slate-800 dark:text-white">Student Teaching Assistant - UCLouvain</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | Janvier 2026 - Juin 2026</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | January 2026 - June 2026</p>
                     <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                        <li>Accompagnement des étudiants dans la création de sites web (HTML/CSS, Flask, bases de données SQL).</li>
-                        <li>Animation de séances d'exercices pratiques et ré-explication de concepts théoriques (LINFO1002 & LINFO1104).</li>
+                        <li>Assisted students in building HTML/CSS websites with Flask and SQL databases.</li>
+                        <li>Led practical sessions by re-explaining theoretical concepts and answering exercises (LINFO1002 & LINFO1104).</li>
                     </ul>
                 </div>
 
                 <div class="relative">
                     <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-300 ring-4 ring-blue-50 dark:ring-blue-900/50"></div>
                     <h3 class="text-xl font-bold text-slate-800 dark:text-white">Investment Club Member - LSM</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | Septembre 2025 - Mars 2026</p>
-                    <p class="text-slate-600 dark:text-slate-300">Gestion active d'un portefeuille d'actions valorisé à plus de 25 000 € et création de contenu visuel pour les réseaux du club.</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | September 2025 - March 2026</p>
+                    <p class="text-slate-600 dark:text-slate-300">Active management of an equity portfolio valued at more than €25,000 and creation of visual content for social media platforms.</p>
                 </div>
 
             </div>
@@ -368,7 +369,7 @@
     </section>
 
     <footer class="bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 py-12 text-center transition-colors duration-300 border-t border-slate-200 dark:border-slate-800">
-        <p>© 2026 Arthur Louette. Tous droits réservés.</p>
+        <p>© 2026 Arthur Louette. All rights reserved.</p>
     </footer>
 
     <script>
