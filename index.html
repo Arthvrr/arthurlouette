@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arthur Louette | Portfolio</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuration de Tailwind pour le mode sombre via une classe
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
     <style>
-        /* Classes de base pour l'animation au défilement */
+        /* Animation au défilement */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -18,73 +36,187 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
 
-    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <span class="font-bold text-xl tracking-tight text-blue-600">AL.</span>
-            <div class="space-x-6 text-sm font-medium">
-                <a href="#about" class="hover:text-blue-600 transition">À propos</a>
-                <a href="#projects" class="hover:text-blue-600 transition">Projets</a>
-                <a href="#experience" class="hover:text-blue-600 transition">Expérience</a>
+    <nav class="fixed w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm z-50 transition-colors duration-300 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <span class="font-bold text-xl tracking-tight text-blue-600 dark:text-blue-400">AL.</span>
+            <div class="flex items-center gap-6 text-sm font-medium">
+                <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">À propos</a>
+                <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Formations</a>
+                <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Expériences</a>
+                <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Projets</a>
+                
+                <button id="theme-toggle" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none rounded-lg text-sm p-2.5 transition-colors">
+                    <i id="theme-toggle-dark-icon" class="fa-solid fa-moon hidden text-lg"></i>
+                    <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden text-lg"></i>
+                </button>
             </div>
         </div>
     </nav>
 
-    <header class="min-h-screen flex items-center justify-center pt-20">
-        <div class="max-w-4xl mx-auto px-4 text-center reveal">
-            <img src="https://via.placeholder.com/150" alt="Arthur Louette" class="w-32 h-32 rounded-full mx-auto mb-6 shadow-lg object-cover">
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-slate-800">
-                Créateur de solutions <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Intelligentes</span>
-            </h1>
-            <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-                Étudiant en Master Informatique & IA. Passionné par le développement d'outils concrets, de l'implémentation de modèles ML à la création d'applications natives et web.
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition">Voir mes projets</a>
-                <a href="https://github.com/TON_GITHUB" target="_blank" class="bg-white border border-slate-200 text-slate-700 px-6 py-3 rounded-lg font-medium shadow-sm hover:bg-slate-50 transition">GitHub</a>
+    <header id="about" class="min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 w-full flex flex-col md:flex-row items-center gap-12 md:gap-20 reveal">
+            
+            <div class="w-full md:w-5/12 flex justify-center md:justify-end relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-3xl blur-3xl opacity-20 dark:opacity-30 animate-pulse w-64 h-80 md:w-80 md:h-[28rem] m-auto"></div>
+                
+                <img src="Photo de Profil.png" alt="Arthur Louette" class="relative z-10 w-64 h-80 md:w-80 md:h-[28rem] rounded-3xl object-cover shadow-2xl border-8 border-white dark:border-slate-800">
             </div>
+
+            <div class="w-full md:w-7/12 text-center md:text-left bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-slate-800 dark:text-white">
+                    Arthur <br class="hidden md:block"/><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Louette</span>
+                </h1>
+                <h2 class="text-2xl text-slate-600 dark:text-slate-300 font-medium mb-6">Computer Science & AI Master's Student</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto md:mx-0">
+                    Passionné par l'intelligence artificielle, la finance et le développement d'outils concrets. De l'implémentation de modèles ML à la création d'applications natives macOS et web.
+                </p>
+                
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="https://github.com/Arthvrr" target="_blank" class="bg-slate-900 dark:bg-slate-700 text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-slate-800 dark:hover:bg-slate-600 transition flex items-center gap-2">
+                        <i class="fa-brands fa-github text-xl"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/arthurlouette/" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition flex items-center gap-2">
+                        <i class="fa-brands fa-linkedin text-xl"></i> LinkedIn
+                    </a>
+                    <a href="mailto:arthurlouette12@gmail.com" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 px-6 py-3 rounded-lg font-medium shadow-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-xl"></i> Email
+                    </a>
+                </div>
+            </div>
+            
         </div>
     </header>
 
-    <section id="projects" class="py-24 bg-white">
+    <section id="education" class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 reveal">
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 dark:text-white">Formations</h2>
+            <div class="space-y-10 border-l-2 border-indigo-200 dark:border-indigo-900 pl-6 ml-4">
+                
+                <div class="relative">
+                    <div class="absolute -left-[37px] top-1 h-4 w-4 rounded-full bg-indigo-600 ring-4 ring-indigo-100 dark:ring-indigo-900"></div>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Università degli Studi di Padova</h3>
+                    <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Échange Erasmus+</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Padoue, Italie | Septembre 2026 - Février 2027</p>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Mobilité internationale dans le cadre de mon Master. L'objectif est double : découvrir de nouvelles approches académiques dans le domaine de l'IA au sein d'un environnement multiculturel, et parfaire ma maîtrise de l'anglais (technique et conversationnel) pour me préparer efficacement à une carrière d'envergure internationale.
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[37px] top-1 h-4 w-4 rounded-full bg-indigo-500 ring-4 ring-indigo-50 dark:ring-indigo-900/70"></div>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">École Polytechnique de Louvain (UCLouvain)</h3>
+                    <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Master [120] en Sciences Informatiques | Intelligence Artificielle</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Septembre 2024 - Présent</p>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Formation dispensée entièrement en anglais, offrant un équilibre pointu entre excellence scientifique et pragmatisme de terrain ("soft skills", gestion de ressources, éthique). Ce master me prépare à imaginer, concevoir et déployer des systèmes complexes. 
+                        <br><span class="block mt-2 font-medium text-slate-700 dark:text-slate-200">Spécialisation :</span> 
+                        Approfondissement des connaissances théoriques et techniques en Intelligence Artificielle (Machine Learning, Big Data, Optimisation et Programmation par Contraintes), visant à innover avec une attention particulière à la qualité du produit logiciel.
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[37px] top-1 h-4 w-4 rounded-full bg-indigo-400 ring-4 ring-indigo-50 dark:ring-indigo-900/40"></div>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">École Polytechnique de Louvain (UCLouvain)</h3>
+                    <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-1">Bachelier en Sciences Informatiques</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Septembre 2021 - Juin 2024</p>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Acquisition des fondements théoriques et mathématiques nécessaires à la conception d'applications informatiques sécurisées et intelligentes. Développement d'une forte aptitude à l'abstraction, au raisonnement logique et à l'analyse de problèmes complexes. Cette formation pluridisciplinaire m'a également permis d'aborder la gestion d'équipe et de comprendre les enjeux économiques transversaux aux technologies de l'information.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-slate-50 dark:bg-slate-800/30 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-4 reveal">
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 dark:text-white">Expériences</h2>
+            <div class="space-y-8 border-l-2 border-blue-200 dark:border-blue-900 pl-6 ml-4">
+                
+                <div class="relative">
+                    <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-600 ring-4 ring-blue-100 dark:ring-blue-900"></div>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Stage de Mémoire - BNP Paribas Fortis</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Bruxelles | Mars 2027 - Juin 2027</p>
+                    <p class="text-slate-600 dark:text-slate-300">Recherche et développement autour de l'amélioration des réponses des modèles d'IA par l'implémentation de méthodes de calibration pour la classification supervisée.</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-blue-50 dark:ring-blue-900/50"></div>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Ingénieur Systèmes Assistant - UCLouvain</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | Juillet 2026 - Août 2026</p>
+                    <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
+                        <li>Portage du système de programmation Mozart 2 de l'architecture Intel (x86_64) vers Apple Silicon (ARM64).</li>
+                        <li>Résolution de conflits de dépendances C++ bas niveau et configuration de pipelines de compilation (Make, LLVM).</li>
+                    </ul>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-400 ring-4 ring-blue-50 dark:ring-blue-900/50"></div>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Étudiant Tuteur - UCLouvain</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | Janvier 2026 - Juin 2026</p>
+                    <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
+                        <li>Accompagnement des étudiants dans la création de sites web (HTML/CSS, Flask, bases de données SQL).</li>
+                        <li>Animation de séances d'exercices pratiques et ré-explication de concepts théoriques (LINFO1002 & LINFO1104).</li>
+                    </ul>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-300 ring-4 ring-blue-50 dark:ring-blue-900/50"></div>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Membre d'un Club d'Investissement - LSM</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | Septembre 2025 - Mars 2026</p>
+                    <p class="text-slate-600 dark:text-slate-300">Gestion active d'un portefeuille d'actions valorisé à plus de 25 000 € et création de contenu visuel pour les réseaux du club.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center reveal">Projets Personnels</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 dark:text-white reveal">Projets Personnels</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <div class="group border border-slate-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50">
-                    <h3 class="text-xl font-bold mb-2">Bloc.us</h3>
-                    <p class="text-slate-600 mb-4">Application macOS native conçue en Swift pour aider les étudiants à structurer leurs périodes de blocus et suivre leur progression académique.</p>
+                <div class="group border border-slate-100 dark:border-slate-700 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50 dark:bg-slate-800">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-white">Intrinsic</h3>
+                        <a href="https://intrinsic-app.eu" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 mb-4">Application native macOS automatisant la valorisation d'actions (modèles DCF). Intégration d'APIs en temps réel pour générer des analyses de scénarios et des visualisations interactives.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Swift</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">macOS</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold">SwiftUI</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold">APIs (Finnhub)</span>
                     </div>
                 </div>
 
-                <div class="group border border-slate-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50">
-                    <h3 class="text-xl font-bold mb-2">Plot</h3>
-                    <p class="text-slate-600 mb-4">Outil web de visualisation de données générant des graphiques modernes et exportables en haute définition, propulsé par ApexCharts.</p>
+                <div class="group border border-slate-100 dark:border-slate-700 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50 dark:bg-slate-800">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Bloc.us</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-4">Application macOS native conçue pour aider les étudiants à structurer leurs périodes de blocus de manière optimale et à suivre efficacement leur progression académique.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold">JavaScript</span>
-                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold">ApexCharts</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold">Swift</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold">macOS Native</span>
                     </div>
                 </div>
 
-                <div class="group border border-slate-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50">
-                    <h3 class="text-xl font-bold mb-2">MyRAG</h3>
-                    <p class="text-slate-600 mb-4">Assistant conversationnel local exploitant la technologie Retrieval-Augmented Generation (RAG) pour interroger des bases de connaissances spécifiques.</p>
+                <div class="group border border-slate-100 dark:border-slate-700 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50 dark:bg-slate-800">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4">Plot</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-4">Outil web de visualisation de données générant des graphiques modernes et exportables en très haute définition, propulsé par des librairies avancées.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-semibold">Python</span>
-                        <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-semibold">LLM / RAG</span>
+                        <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-xs font-semibold">JavaScript</span>
+                        <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-xs font-semibold">ApexCharts</span>
                     </div>
                 </div>
 
-                <div class="group border border-slate-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50">
-                    <h3 class="text-xl font-bold mb-2">StocksPickeur & Web Freelance</h3>
-                    <p class="text-slate-600 mb-4">Création d'un tracker de portefeuille boursier et conception de sites vitrines complets (ex: yvettehallet.be).</p>
+                <div class="group border border-slate-100 dark:border-slate-700 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal bg-slate-50 dark:bg-slate-800">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-white">MyRAG</h3>
+                        <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"><i class="fa-brands fa-github text-xl"></i></a>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 mb-4">Assistant conversationnel IA local basé sur l'architecture Retrieval-Augmented Generation pour l'indexation et l'interrogation de documents personnels.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold">Web Dev</span>
-                        <span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold">FinanceTech</span>
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-semibold">Python</span>
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-semibold">Llama 3 / ChromaDB</span>
                     </div>
                 </div>
 
@@ -92,52 +224,63 @@
         </div>
     </section>
 
-    <section id="experience" class="py-24 bg-slate-50">
-        <div class="max-w-4xl mx-auto px-4 reveal">
-            <h2 class="text-3xl font-bold mb-12 text-center">Parcours & Mobilité</h2>
-            <div class="space-y-8 border-l-2 border-blue-200 pl-6 ml-4">
-                
-                <div class="relative">
-                    <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-600 ring-4 ring-blue-100"></div>
-                    <h3 class="text-xl font-bold">Stage de Mémoire - BNP Paribas Fortis</h3>
-                    <p class="text-slate-500 text-sm mb-2">Bruxelles | Mars 2027 - Juin 2027</p>
-                    <p class="text-slate-600">Application et recherche autour de l'amélioration des réponses des modèles par l'implémentation de calibration pour la classification supervisée.</p>
-                </div>
-
-                <div class="relative">
-                    <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-400 ring-4 ring-blue-50"></div>
-                    <h3 class="text-xl font-bold">Échange Erasmus+ - Università degli Studi di Padova</h3>
-                    <p class="text-slate-500 text-sm mb-2">Padoue, Italie | Septembre 2026 - Février 2027</p>
-                    <p class="text-slate-600">Mobilité internationale dans le cadre du Master en Informatique/IA.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 text-slate-400 py-12 text-center">
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center transition-colors duration-300">
         <p>© 2026 Arthur Louette. Tous droits réservés.</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // --- Logique d'Animation au Scroll ---
             const reveals = document.querySelectorAll('.reveal');
-            
-            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+            const revealOnScroll = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        // Optionnel : arrêter d'observer une fois animé
-                        // observer.unobserve(entry.target); 
                     }
                 });
             }, {
-                threshold: 0.15, // Se déclenche quand 15% de l'élément est visible
+                threshold: 0.15,
                 rootMargin: "0px 0px -50px 0px"
             });
+            reveals.forEach(reveal => revealOnScroll.observe(reveal));
 
-            reveals.forEach(reveal => {
-                revealOnScroll.observe(reveal);
+            // --- Logique du Dark / Light Mode ---
+            const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+            const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+            const themeToggleBtn = document.getElementById('theme-toggle');
+
+            // Afficher la bonne icône au chargement
+            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                themeToggleLightIcon.classList.remove('hidden');
+            } else {
+                themeToggleDarkIcon.classList.remove('hidden');
+            }
+
+            // Écouter les clics sur le bouton
+            themeToggleBtn.addEventListener('click', function() {
+                // Basculer les icônes
+                themeToggleDarkIcon.classList.toggle('hidden');
+                themeToggleLightIcon.classList.toggle('hidden');
+
+                // Si on a déjà une préférence dans le localStorage
+                if (localStorage.getItem('color-theme')) {
+                    if (localStorage.getItem('color-theme') === 'light') {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    }
+                // S'il n'y a pas de préférence, on vérifie via le système de l'OS
+                } else {
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    }
+                }
             });
         });
     </script>
