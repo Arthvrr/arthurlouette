@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Louette | Portfolio</title>
+    <title>Arthur Louette | AI & Software Engineer</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -52,18 +52,33 @@
     <nav class="fixed w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm z-50 transition-colors duration-300 border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <span class="font-bold text-xl tracking-tight text-blue-600 dark:text-blue-400">AL.</span>
-            <div class="flex items-center gap-6 text-sm font-medium">
-                <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">About</a>
-                <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Projects</a>
-                <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Education</a>
-                <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition hidden sm:inline-block">Experience</a>
-                <a href="index.html" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300 hover:text-blue-600 transition">FR</a>
+            
+            <div class="flex items-center gap-4 md:gap-6 text-sm font-medium">
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition">About</a>
+                    <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Projects</a>
+                    <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Education</a>
+                    <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Experience</a>
+                    <a href="index.html" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300 hover:text-blue-600 transition">FR</a>
+                </div>
                 
                 <button id="theme-toggle" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none rounded-lg text-sm p-2.5 transition-colors">
                     <i id="theme-toggle-dark-icon" class="fa-solid fa-moon hidden text-lg"></i>
                     <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden text-lg"></i>
                 </button>
+
+                <button id="mobile-menu-btn" class="md:hidden text-slate-600 dark:text-slate-300 text-2xl focus:outline-none p-2">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-lg flex-col font-medium">
+            <a href="#about" class="block px-6 py-4 border-t border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">About</a>
+            <a href="#projects" class="block px-6 py-4 border-t border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Projects</a>
+            <a href="#education" class="block px-6 py-4 border-t border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Education</a>
+            <a href="#experience" class="block px-6 py-4 border-t border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Experience</a>
+            <a href="index.html" class="block px-6 py-4 border-t border-slate-100 dark:border-slate-800 text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20">Passer en Français (FR)</a>
         </div>
     </nav>
 
@@ -76,12 +91,20 @@
             </div>
 
             <div class="w-full lg:w-8/12 text-center lg:text-left bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm">
+                
+                <div class="mb-4 inline-block px-3 py-1 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-sm font-semibold rounded-full">
+                    <i class="fa-solid fa-bullseye mr-1"></i> Target: 2027 Graduate Programme
+                </div>
+
                 <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-slate-800 dark:text-white">
                     Arthur <br class="hidden lg:block"/><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Louette</span>
                 </h1>
-                <h2 class="text-2xl text-slate-600 dark:text-slate-300 font-medium mb-6">Computer Science & AI Master's Student</h2>
-                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0">
-                    Passionate about artificial intelligence, finance, and building concrete tools. From implementing ML models to creating native macOS and web applications.
+                
+                <h2 class="text-2xl md:text-3xl text-slate-700 dark:text-slate-200 font-bold mb-6">AI & Software Engineer</h2>
+                
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200">Building AI-powered software, macOS apps, and fintech tools.</span><br/>
+                    I design robust, reliable, and secure software solutions combining artificial intelligence and finance to address the challenges of tomorrow's infrastructures.
                 </p>
                 
                 <div class="flex flex-wrap justify-center lg:justify-start gap-4">
@@ -111,7 +134,7 @@
                 <span>FastAPI</span>
                 <span>LangChain</span>
                 <span>Supabase</span>
-                <span>Tailwind</span>
+                <span>Cybersecurity</span>
                 <span>Machine Learning</span>
                 <span class="flex items-center gap-2"><i class="fa-brands fa-git-alt"></i> Git</span>
                 
@@ -121,7 +144,7 @@
                 <span>FastAPI</span>
                 <span>LangChain</span>
                 <span>Supabase</span>
-                <span>Tailwind</span>
+                <span>Cybersecurity</span>
                 <span>Machine Learning</span>
                 <span class="flex items-center gap-2"><i class="fa-brands fa-git-alt"></i> Git</span>
             </div>
@@ -136,6 +159,35 @@
                 
                 <div class="flex flex-col md:flex-row items-center gap-12 reveal">
                     <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800 group">
+                        <img src="Azimut/image1.png" alt="Azimut 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img">
+                        <img src="Azimut/image2.png" alt="Azimut 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                        <img src="Azimut/image3.png" alt="Azimut 3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
+                        <div class="absolute inset-0 flex items-center justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity z-20">
+                            <button class="prev-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="next-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="flex items-center flex-wrap gap-3 mb-4">
+                            <h3 class="text-3xl font-bold text-slate-800 dark:text-white">Azimut</h3>
+                            <a href="https://github.com/Arthvrr/Azimut" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
+                            <a href="#" class="text-xs font-semibold text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 px-3 py-1.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition flex items-center gap-2 shadow-sm ml-auto">
+                                <i class="fa-solid fa-sitemap"></i> View SaaS Architecture
+                            </a>
+                        </div>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                            SaaS platform (Progressive Web App) designed for the administrative and communication management of scout units. Features include document centralization with automated purge (Smart Rollover) and targeted emails. Multi-role architecture ensuring <span class="font-semibold text-slate-800 dark:text-slate-200">strict data security and isolation (GDPR compliant)</span>.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-xs font-semibold">Python (FastAPI)</span>
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-xs font-semibold">Supabase</span>
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-xs font-semibold">PWA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 reveal">
+                    <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800 group">
                         <img src="Intrinsic/image1.png" alt="Intrinsic App 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img">
                         <img src="Intrinsic/image2.png" alt="Intrinsic App 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
                         <img src="Intrinsic/image3.png" alt="Intrinsic App 3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
@@ -145,21 +197,22 @@
                         </div>
                     </div>
                     <div class="w-full md:w-1/2">
-                        <div class="flex items-center gap-4 mb-4">
+                        <div class="flex items-center flex-wrap gap-3 mb-4">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">Intrinsic</h3>
-                            <a href="https://intrinsic-app.eu" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+                            <a href="https://intrinsic-app.eu" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
+                            <a href="https://github.com/Arthvrr/Intrinsic" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
                         </div>
                         <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Native macOS application automating stock valuation via DCF models. The tool integrates real-time APIs (Finnhub, ExchangeRate) with multithreading to generate stock scenario analyses and interactive data visualizations.
+                            Native macOS application automating stock valuation via DCF models. Integrates real-time APIs (Finnhub, ExchangeRate) and multithreading to generate secure stock scenario analyses and data visualizations.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">SwiftUI & XCode</span>
-                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">REST APIs</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-semibold">SwiftUI & XCode</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-semibold">REST APIs</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row-reverse items-center gap-12 reveal">
+                <div class="flex flex-col md:flex-row items-center gap-12 reveal">
                     <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800 group">
                         <img src="Bloc.us/image1.png" alt="Bloc.us 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img">
                         <img src="Bloc.us/image2.png" alt="Bloc.us 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
@@ -170,40 +223,17 @@
                         </div>
                     </div>
                     <div class="w-full md:w-1/2">
-                        <div class="flex items-center gap-4 mb-4">
+                        <div class="flex items-center flex-wrap gap-3 mb-4">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">Bloc.us</h3>
-                            <a href="https://arthvrr.github.io/Bloc.us/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+                            <a href="https://arthvrr.github.io/Bloc.us/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
+                            <a href="https://github.com/Arthvrr/Bloc.us" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
                         </div>
                         <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Native macOS productivity tool specifically designed for students. The application helps structure study periods effectively, integrates focus timers, and tracks academic progress throughout the year.
+                            Native macOS productivity tool designed for students. Helps structure study periods effectively, integrates focus timers, and tracks academic progress seamlessly throughout the year.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">Swift</span>
-                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">macOS Native</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:flex-row items-center gap-12 reveal">
-                    <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800 group">
-                        <img src="Azimut/image1.png" alt="Azimut 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img">
-                        <img src="Azimut/image2.png" alt="Azimut 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
-                        <img src="Azimut/image3.png" alt="Azimut 3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img">
-                        <div class="absolute inset-0 flex items-center justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity z-20">
-                            <button class="prev-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm"><i class="fa-solid fa-chevron-left"></i></button>
-                            <button class="next-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm"><i class="fa-solid fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/2">
-                        <h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-4">Azimut</h3>
-                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            SaaS platform (Progressive Web App) designed for the administrative and communication management of scout units. Features include document centralization with automated purge (Smart Rollover), interactive agenda, and targeted emails. Multi-role architecture ensuring strict data isolation (GDPR compliant).
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-sm font-semibold">Python (FastAPI)</span>
-                            <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-sm font-semibold">Supabase</span>
-                            <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-sm font-semibold">Vanilla JS & PWA</span>
-                            <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-sm font-semibold">Brevo API</span>
+                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-semibold">Swift</span>
+                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-semibold">macOS Native</span>
                         </div>
                     </div>
                 </div>
@@ -218,17 +248,19 @@
                         </div>
                     </div>
                     <div class="w-full md:w-1/2">
-                        <div class="flex items-center gap-4 mb-4">
+                        <div class="flex items-center flex-wrap gap-3 mb-4">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">MyRAG</h3>
-                            <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300"><i class="fa-brands fa-github text-xl"></i></a>
+                            <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
+                            <a href="#" class="text-xs font-semibold text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 px-3 py-1.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition flex items-center gap-2 shadow-sm ml-auto">
+                                <i class="fa-solid fa-brain"></i> Read Tech Study
+                            </a>
                         </div>
                         <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Development of a local AI conversational assistant. Based on the Retrieval-Augmented Generation (RAG) architecture, it enables indexing and precise querying of personal knowledge bases and documents, ensuring 100% privacy.
+                            Development of a local AI conversational assistant based on the Retrieval-Augmented Generation (RAG) architecture. It enables precise querying of personal knowledge bases, ensuring 100% privacy.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-sm font-semibold">Python & LangChain</span>
-                            <span class="px-4 py-2 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-sm font-semibold">Ollama (Llama 3)</span>
-                            <span class="px-4 py-2 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-sm font-semibold">ChromaDB</span>
+                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-semibold">Python & LangChain</span>
+                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-semibold">Ollama / ChromaDB</span>
                         </div>
                     </div>
                 </div>
@@ -243,13 +275,16 @@
                         </div>
                     </div>
                     <div class="w-full md:w-1/2">
-                        <h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-4">BlueChip</h3>
+                        <div class="flex items-center flex-wrap gap-3 mb-4">
+                            <h3 class="text-3xl font-bold text-slate-800 dark:text-white">BlueChip</h3>
+                            <a href="https://github.com/Arthvrr/BlueChip" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
+                        </div>
                         <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            A web interface designed for tracking stock portfolios (evolution of the StocksPickeur project). Combining my interest in finance and web development, the tool allows users to analyze and track investment performances.
+                            A robust web interface designed for tracking and analyzing stock portfolios. Combining my interest in finance and web development to visualize investment performances efficiently.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 rounded-lg text-sm font-semibold">Fullstack Web</span>
-                            <span class="px-4 py-2 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 rounded-lg text-sm font-semibold">FinanceTech</span>
+                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 rounded-lg text-xs font-semibold">Fullstack Web</span>
+                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 rounded-lg text-xs font-semibold">FinanceTech</span>
                         </div>
                     </div>
                 </div>
@@ -264,16 +299,17 @@
                         </div>
                     </div>
                     <div class="w-full md:w-1/2">
-                        <div class="flex items-center gap-4 mb-4">
+                        <div class="flex items-center flex-wrap gap-3 mb-4">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">MyTOB.be</h3>
-                            <a href="https://mytob.be" target="_blank" class="text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+                            <a href="https://mytob.be" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
+                            <a href="https://github.com/Arthvrr/mytob.be" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
                         </div>
                         <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Web application designed to automate a complex tax task for Belgian investors: the calculation and automatic PDF generation for the Tax on Stock Exchange Transactions (TOB) declaration.
+                            Web application designed to precisely automate a complex tax task for Belgian investors: the calculation and automatic PDF generation for the Tax on Stock Exchange Transactions (TOB) declaration.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-sm font-semibold">JavaScript</span>
-                            <span class="px-4 py-2 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-sm font-semibold">PDF Generation</span>
+                            <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold">JavaScript</span>
+                            <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold">PDF Generation</span>
                         </div>
                     </div>
                 </div>
@@ -295,7 +331,7 @@
                     <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
                         <li>International mobility focused on Artificial Intelligence.</li>
                         <li>Developing strong adaptability and collaboration skills within multicultural and international teams.</li>
-                        <li>Multicultural immersion and technical English proficiency improvement.</li>
+                        <li>Technical English proficiency improvement.</li>
                     </ul>
                 </div>
 
@@ -306,7 +342,7 @@
                     <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">September 2025 - June 2027</p>
                     <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
                         <li>Specialization: Machine Learning, Big Data, Optimization, and Constraint Programming.</li>
-                        <li>100% English-taught program combining complex systems design, innovation, and soft skills.</li>
+                        <li>100% English-taught program combining software architecture design, innovation, and soft skills.</li>
                     </ul>
                 </div>
 
@@ -359,7 +395,7 @@
 
                 <div class="relative">
                     <div class="absolute -left-[35px] top-1 h-4 w-4 rounded-full bg-blue-300 ring-4 ring-blue-50 dark:ring-blue-900/50"></div>
-                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Investment Club Member - LSM</h3>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white">Investment Club Member - Louvain School of Management</h3>
                     <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">Louvain-La-Neuve | September 2025 - March 2026</p>
                     <p class="text-slate-600 dark:text-slate-300">Active management of an equity portfolio valued at more than €25,000 and creation of visual content for social media platforms.</p>
                 </div>
@@ -374,6 +410,33 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+
+            // --- Mobile Menu (Hamburger) Logic ---
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuIcon = mobileMenuBtn.querySelector('i');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenuIcon.classList.remove('fa-xmark');
+                    mobileMenuIcon.classList.add('fa-bars');
+                } else {
+                    mobileMenuIcon.classList.remove('fa-bars');
+                    mobileMenuIcon.classList.add('fa-xmark');
+                }
+            });
+
+            // Close mobile menu on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuIcon.classList.remove('fa-xmark');
+                    mobileMenuIcon.classList.add('fa-bars');
+                });
+            });
+
+            // --- Scroll Reveal ---
             const reveals = document.querySelectorAll('.reveal');
             const revealOnScroll = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -387,8 +450,8 @@
             });
             reveals.forEach(reveal => revealOnScroll.observe(reveal));
 
+            // --- Image Sliders ---
             const sliders = document.querySelectorAll('.slider-container');
-            
             sliders.forEach(slider => {
                 const images = slider.querySelectorAll('.slider-img');
                 const prevBtn = slider.querySelector('.prev-btn');
@@ -441,6 +504,7 @@
                 }
             });
 
+            // --- Dark / Light Mode ---
             const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
             const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
             const themeToggleBtn = document.getElementById('theme-toggle');
