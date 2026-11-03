@@ -64,6 +64,19 @@
         @keyframes scroll {
             to { transform: translateX(-50%); }
         }
+
+        /* Custom scrollbar for terminal & contribution graph */
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(148, 163, 184, 0.3);
+            border-radius: 9999px;
+        }
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
@@ -73,15 +86,23 @@
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <span class="font-bold text-xl tracking-tight text-blue-600 dark:text-blue-400">AL.</span>
             
-            <div class="flex items-center gap-4 md:gap-6 text-sm font-medium">
+            <div class="flex items-center gap-3 md:gap-5 text-sm font-medium">
                 <!-- Liens Desktop -->
                 <div class="hidden md:flex items-center gap-6">
                     <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition">À propos</a>
                     <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Projets</a>
                     <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Formations</a>
                     <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Expériences</a>
+                    <a href="#volunteering" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Bénévolat</a>
                     <a href="index_en.html" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300 hover:text-blue-600 transition">EN</a>
                 </div>
+
+                <!-- Bouton Terminal Easter Egg -->
+                <button id="terminal-toggle" type="button" title="Ouvrir le Terminal Interactif (⌘K)" class="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-slate-900 text-slate-700 dark:text-emerald-400 border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-emerald-500/50 rounded-lg text-xs font-mono transition-all shadow-sm">
+                    <i class="fa-solid fa-terminal"></i>
+                    <span class="hidden sm:inline">Terminal</span>
+                    <kbd class="hidden lg:inline-block px-1.5 py-0.5 text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-transparent rounded">⌘K</kbd>
+                </button>
                 
                 <!-- Bouton Dark/Light Mode -->
                 <button id="theme-toggle" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none rounded-lg text-sm p-2.5 transition-colors">
@@ -102,6 +123,7 @@
             <a href="#projects" class="block px-6 py-4 border-t border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Projets</a>
             <a href="#education" class="block px-6 py-4 border-t border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Formations</a>
             <a href="#experience" class="block px-6 py-4 border-t border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Expériences</a>
+            <a href="#volunteering" class="block px-6 py-4 border-t border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Bénévolat</a>
             <a href="index_en.html" class="block px-6 py-4 border-t border-slate-100 dark:border-slate-800 text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20">Switch to English (EN)</a>
         </div>
     </nav>
@@ -149,6 +171,43 @@
             </div>
         </div>
     </header>
+
+    <!-- THE JOURNEY (Avant/Après) -->
+    <section class="py-16 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 reveal">
+            <div class="flex flex-col md:flex-row items-center gap-12 bg-slate-50 dark:bg-slate-800/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm">
+                
+                <!-- Bloc Image avec Toggle -->
+                <div class="w-full md:w-1/2 relative aspect-video rounded-2xl overflow-hidden shadow-lg group">
+                    <img id="journey-img-past" src="young-programmer.png" alt="Arthur enfant devant un ordinateur" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+                    <img id="journey-img-present" src="setup.png" alt="Setup actuel de développement" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+                    
+                    <!-- Bouton Toggle intégré à l'image -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-1.5 rounded-full flex gap-1 z-20 shadow-lg border border-slate-200/50 dark:border-slate-700/50">
+                        <button id="btn-past" class="px-4 py-1.5 rounded-full text-sm font-semibold transition-all bg-blue-600 text-white shadow-sm focus:outline-none">2006</button>
+                        <button id="btn-present" class="px-4 py-1.5 rounded-full text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all focus:outline-none">Aujourd'hui</button>
+                    </div>
+                </div>
+
+                <!-- Bloc Texte dynamique -->
+                <div class="w-full md:w-1/2 relative h-[250px] overflow-hidden">
+                    <div id="text-past" class="transition-all duration-700 opacity-100 absolute inset-0 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">Tout a commencé par la curiosité...</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-justify">
+                            Depuis tout petit, je suis fasciné par les ordinateurs. Ce qui a commencé par de la pure curiosité et du bricolage ludique s'est vite transformé en une véritable passion pour la création. J'ai toujours voulu comprendre comment fonctionnent les machines et développer mes propres outils numériques.
+                        </p>
+                    </div>
+                    
+                    <div id="text-present" class="transition-all duration-700 opacity-0 transform translate-y-4 absolute inset-0 flex flex-col justify-center pointer-events-none">
+                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">...et a évolué vers l'Ingénierie.</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-justify">
+                            Aujourd'hui, mon installation a changé, mais ma motivation reste intacte. Je me concentre sur la conception d'architectures logicielles robustes et évolutives. En m'appuyant sur l'Intelligence Artificielle, le Machine Learning et le développement logiciel moderne, je cherche à résoudre des problèmes concrets et à contribuer aux innovations technologiques de demain.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- BANDEAU TECH STACK -->
     <div class="py-8 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 overflow-hidden">
@@ -211,7 +270,7 @@
                 <p class="text-slate-600 dark:text-slate-400 mb-6 text-sm">Mes passions et activités qui forgent mon profil :</p>
                 <div class="flex flex-wrap gap-3">
                     <span class="px-4 py-2.5 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-200 rounded-xl text-sm font-medium flex items-center gap-2 cursor-default">
-                        <i class="fa-solid fa-campground text-orange-500 text-lg"></i> Scoutisme (Chef d'Unité)
+                        <i class="fa-solid fa-campground text-orange-500 text-lg"></i> Scoutisme
                     </span>
                     <span class="px-4 py-2.5 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-200 rounded-xl text-sm font-medium flex items-center gap-2 cursor-default">
                         <i class="fa-solid fa-chart-line text-emerald-500 text-lg"></i> Bourse & Investissement
@@ -260,6 +319,7 @@
                     </div>
                     <div class="w-full md:w-1/2">
                         <div class="flex items-center flex-wrap gap-3 mb-4">
+                            <img src="projects-logo/bluechip.png" alt="Logo BlueChip" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">BlueChip</h3>
                             <a href="https://arthvrr.github.io/BlueChip/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
                             <a href="https://github.com/Arthvrr/BlueChip" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
@@ -289,6 +349,7 @@
                     </div>
                     <div class="w-full md:w-1/2">
                         <div class="flex items-center flex-wrap gap-3 mb-4">
+                            <img src="projects-logo/myrag.png" alt="Logo MyRAG" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">MyRAG</h3>
                             <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
                             <a href="#" class="text-xs font-semibold text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 px-3 py-1.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition flex items-center gap-2 shadow-sm ml-auto">
@@ -321,6 +382,7 @@
                     </div>
                     <div class="w-full md:w-1/2">
                         <div class="flex items-center flex-wrap gap-3 mb-4">
+                            <img src="projects-logo/azimut.png" alt="Logo Azimut" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">Azimut</h3>
                             <a href="https://azimut-app.be" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
                             <a href="https://github.com/Arthvrr/Azimut" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
@@ -354,6 +416,7 @@
                     </div>
                     <div class="w-full md:w-1/2">
                         <div class="flex items-center flex-wrap gap-3 mb-4">
+                            <img src="projects-logo/intrinsic.png" alt="Logo Intrinsic" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">Intrinsic</h3>
                             <a href="https://intrinsic-app.eu" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
                             <a href="https://github.com/Arthvrr/Intrinsic" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
@@ -386,6 +449,7 @@
                     </div>
                     <div class="w-full md:w-1/2">
                         <div class="flex items-center flex-wrap gap-3 mb-4">
+                            <img src="projects-logo/blocus.png" alt="Logo Bloc.us" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">Bloc.us</h3>
                             <a href="https://arthvrr.github.io/Bloc.us/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
                             <a href="https://github.com/Arthvrr/Bloc.us" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
@@ -415,6 +479,7 @@
                     </div>
                     <div class="w-full md:w-1/2">
                         <div class="flex items-center flex-wrap gap-3 mb-4">
+                            <img src="projects-logo/mytob.png" alt="Logo MyTOB" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">MyTOB.be</h3>
                             <a href="https://mytob.be" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
                             <a href="https://github.com/Arthvrr/mytob.be" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
@@ -426,6 +491,85 @@
                             <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold">JavaScript</span>
                             <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold">Génération PDF</span>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Carte Interactive des Contributions GitHub -->
+                <div class="mt-20 reveal">
+                    <div class="bg-slate-50 dark:bg-slate-800/60 rounded-3xl p-6 md:p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-sm">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-slate-900 dark:bg-slate-700 text-white flex items-center justify-center text-xl shadow-sm">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                                        Activité Open Source & Code
+                                    </h4>
+                                    <p id="gh-total-count" class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+                                        Chargement des contributions de @Arthvrr...
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1.5 bg-white dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-700 self-start sm:self-auto flex-wrap">
+                                <button data-gh-year="last" class="gh-year-btn px-3 py-1 rounded-lg text-xs font-semibold bg-blue-600 text-white transition">Dernière année</button>
+                                <button data-gh-year="2026" class="gh-year-btn px-3 py-1 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">2026</button>
+                                <button data-gh-year="2025" class="gh-year-btn px-3 py-1 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">2025</button>
+                                <button data-gh-year="2024" class="gh-year-btn px-3 py-1 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">2024</button>
+                                <button data-gh-year="2023" class="gh-year-btn px-3 py-1 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">2023</button>
+                                <button data-gh-year="2022" class="gh-year-btn px-3 py-1 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">2022</button>
+                            </div>
+                        </div>
+
+                        <!-- Grille du Calendrier -->
+                        <div class="overflow-x-auto custom-scrollbar pb-2">
+                            <div class="min-w-[720px]">
+                                <!-- Ligne des mois -->
+                                <div id="gh-months" class="grid grid-cols-12 text-[11px] text-slate-400 dark:text-slate-500 font-mono mb-2 pl-6"></div>
+                                <div class="flex gap-2 items-center">
+                                    <!-- Jours -->
+                                    <div class="flex flex-col justify-between h-[88px] text-[10px] text-slate-400 dark:text-slate-500 font-mono pr-1 py-1">
+                                        <span>Lun</span>
+                                        <span>Mer</span>
+                                        <span>Ven</span>
+                                    </div>
+                                    <!-- Grille de 53 semaines -->
+                                    <div id="gh-grid" class="flex gap-[3px] flex-1">
+                                        <!-- Généré dynamiquement en JS -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Légende et statut au survol -->
+                        <div class="mt-4 pt-3 border-t border-slate-200/60 dark:border-slate-700/50 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
+                            <span id="gh-hover-info" class="font-mono text-[11px]">Survolez une case pour inspecter les commits quotidiens.</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="text-[11px]">Moins</span>
+                                <span class="w-3 h-3 rounded-[3px] bg-slate-200 dark:bg-slate-700/70 inline-block"></span>
+                                <span class="w-3 h-3 rounded-[3px] bg-emerald-200 dark:bg-emerald-900/70 inline-block"></span>
+                                <span class="w-3 h-3 rounded-[3px] bg-emerald-400 dark:bg-emerald-700 inline-block"></span>
+                                <span class="w-3 h-3 rounded-[3px] bg-emerald-500 dark:bg-emerald-500 inline-block"></span>
+                                <span class="w-3 h-3 rounded-[3px] bg-emerald-600 dark:bg-emerald-400 inline-block"></span>
+                                <span class="text-[11px]">Plus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bannière vers GitHub pour les autres projets -->
+                <div class="mt-12 reveal">
+                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-slate-800/80 dark:to-indigo-900/20 rounded-3xl p-8 border border-blue-100 dark:border-indigo-500/20 text-center flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+                        <div class="text-left max-w-2xl">
+                            <h4 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Envie d'en voir plus ?</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Curieux de découvrir mes anciens projets académiques, le portfolio réalisé pour ma grand-mère artiste peintre ou mes expérimentations passées ? Consultez la liste complète de mes dépôts sur GitHub !
+                            </p>
+                        </div>
+                        <a href="https://github.com/Arthvrr?tab=repositories" target="_blank" class="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 dark:hover:bg-slate-600 text-white rounded-xl font-medium transition-colors shadow-md">
+                            <i class="fa-brands fa-github text-lg"></i>
+                            Explorer tous les dépôts
+                        </a>
                     </div>
                 </div>
 
@@ -592,6 +736,50 @@
         </div>
     </section>
 
+    <!-- BÉNÉVOLAT SECTION -->
+    <section id="volunteering" class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 reveal">
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 dark:text-white">Bénévolat & Leadership</h2>
+            <div class="space-y-8 border-l-2 border-orange-200 dark:border-orange-900 pl-6 ml-4">
+                
+                <!-- Chef Scout -->
+                <div class="relative">
+                    <div class="absolute -left-[35px] top-1.5 h-4 w-4 rounded-full bg-orange-500 ring-4 ring-orange-50 dark:ring-orange-900/50"></div>
+                    <div class="flex items-start gap-4 mb-3">
+                        <img src="logos/scouts.png" alt="Logo Les Scouts ASBL" class="w-12 h-12 rounded-xl object-contain bg-white p-1 shadow-sm border border-slate-100 dark:border-slate-700 shrink-0">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800 dark:text-white">Chef Scout - Les Scouts ASBL</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm">Septembre 2021 - Septembre 2027</p>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1.5">
+                        <li>Chef d'unité engagé auprès de jeunes de 6 à 18 ans au sein de l'Unité des 4 Chênes (6BW) durant 6 années consécutives.</li>
+                        <li>Organisation d'activités éducatives, de camps d'été et de réunions hebdomadaires tout en assurant la sécurité et le bien-être des jeunes.</li>
+                        <li>Trésorier de la section Louveteaux durant la saison 2022-2023, en charge de la gestion financière et du budget.</li>
+                    </ul>
+                </div>
+
+                <!-- BW Open -->
+                <div class="relative">
+                    <div class="absolute -left-[35px] top-1.5 h-4 w-4 rounded-full bg-orange-400 ring-4 ring-orange-50 dark:ring-orange-900/50"></div>
+                    <div class="flex items-start gap-4 mb-3">
+                        <img src="logos/bwopen.png" alt="Logo BW Open" class="w-12 h-12 rounded-xl object-contain bg-white p-1 shadow-sm border border-slate-100 dark:border-slate-700 shrink-0">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800 dark:text-white">Bénévole Étudiant - BW Open</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm">Janvier 2023 - Janvier 2024</p>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1.5">
+                        <li>Bénévole lors du BW Open, un tournoi international de tennis majeur du circuit ATP Challenger organisé en Belgique.</li>
+                        <li>Participation aux opérations sur le terrain afin d'assurer une expérience fluide pour les joueurs, le staff et les spectateurs.</li>
+                        <li>Forte capacité d'adaptation et esprit d'équipe au sein d'un événement sportif professionnel au rythme soutenu.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- RECOMMANDATIONS SECTION -->
     <section id="recommendations" class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4 reveal">
@@ -606,11 +794,11 @@
                     </p>
                     <div class="flex items-center justify-between mt-auto">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center text-xl font-bold text-blue-600 dark:text-blue-400">
-                                VR
-                            </div>
+                            <!-- Remplacement des initiales par la photo -->
+                            <img src="peoples/VanRoy.jpeg" alt="Professeur Peter Van Roy" class="w-12 h-12 rounded-full object-cover shadow-sm border border-slate-200 dark:border-slate-700 shrink-0">
+                            
                             <div>
-                                <h4 class="font-bold text-slate-800 dark:text-white">Prof. Peter Van Roy</h4>
+                                <h4 class="font-bold text-slate-800 dark:text-white">Professeur Peter Van Roy</h4>
                                 <p class="text-sm text-slate-500 dark:text-slate-400">UCLouvain ICTEAM Institute</p>
                             </div>
                         </div>
@@ -620,7 +808,7 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 relative">
+                <!-- <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 relative">
                     <i class="fa-solid fa-quote-left text-4xl text-blue-100 dark:text-slate-700 absolute top-6 left-6"></i>
                     <p class="text-slate-600 dark:text-slate-300 italic mb-8 relative z-10 pt-6 leading-relaxed">
                         <span class="text-slate-400 dark:text-slate-500">[ En attente de la recommandation officielle suite à la clôture de mon stage de mémoire sur la calibration des modèles d'Intelligence Artificielle en classification supervisée. ]</span>
@@ -634,7 +822,7 @@
                             <p class="text-sm text-slate-500 dark:text-slate-400">Superviseur de Stage, BNP Paribas Fortis</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -642,6 +830,51 @@
     <footer class="bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 py-12 text-center transition-colors duration-300 border-t border-slate-200 dark:border-slate-800">
         <p>© 2026 Arthur Louette. Tous droits réservés.</p>
     </footer>
+
+    <!-- TERMINAL INTERACTIF MODAL (EASTER EGG) -->
+    <div id="terminal-modal" class="fixed inset-0 z-[110] hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity opacity-0">
+        <div class="w-full max-w-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden font-mono text-sm transform scale-95 transition-transform duration-200" id="terminal-window">
+            <!-- Barre de titre macOS -->
+            <div class="bg-slate-100 dark:bg-slate-800/90 px-4 py-3 flex items-center justify-between border-b border-slate-200 dark:border-slate-700/80">
+                <div class="flex items-center gap-2">
+                    <button id="terminal-close-dot" class="w-3.5 h-3.5 rounded-full bg-rose-500 hover:bg-rose-600 transition focus:outline-none" title="Fermer"></button>
+                    <button id="terminal-min-dot" class="w-3.5 h-3.5 rounded-full bg-amber-400 hover:bg-amber-500 transition focus:outline-none" title="Réduire"></button>
+                    <span class="w-3.5 h-3.5 rounded-full bg-emerald-500 inline-block"></span>
+                </div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-2 font-medium">
+                    <i class="fa-brands fa-apple text-slate-400 dark:text-slate-300"></i>
+                    <span>arthur@macbook-pro: ~/portfolio (zsh)</span>
+                </div>
+                <div class="text-[11px] text-slate-400 dark:text-slate-500">ESC pour fermer</div>
+            </div>
+
+            <!-- Raccourcis de commandes -->
+            <div class="bg-slate-50 dark:bg-slate-900/90 px-4 py-2 border-b border-slate-200 dark:border-slate-800 flex flex-wrap items-center gap-1.5 text-xs">
+                <span class="text-slate-500 mr-1">Raccourcis :</span>
+                <button data-cmd="help" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-emerald-600 dark:text-emerald-400 rounded transition">help</button>
+                <button data-cmd="whoami" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-blue-600 dark:text-blue-400 rounded transition">whoami</button>
+                <button data-cmd="cat skills.txt" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-purple-600 dark:text-purple-400 rounded transition">cat skills.txt</button>
+                <button data-cmd="ls" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-amber-600 dark:text-amber-400 rounded transition">ls</button>
+                <button data-cmd="cd projects" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-cyan-600 dark:text-cyan-400 rounded transition">cd projects</button>
+                <button data-cmd="sudo hire arthur" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-rose-600 dark:text-rose-400 rounded transition">sudo hire arthur</button>
+            </div>
+
+            <!-- Corps du Terminal -->
+            <div id="terminal-body" class="p-5 h-[360px] overflow-y-auto custom-scrollbar space-y-2 text-slate-800 dark:text-slate-200 leading-relaxed bg-white dark:bg-slate-900">
+                <div class="text-slate-500 dark:text-slate-400">Dernière connexion : <span id="terminal-login-date"></span> sur ttys001</div>
+                <div>Bienvenue sur <span class="text-blue-600 dark:text-blue-400 font-bold">ArthurOS v2.7</span> (ARM64). Tapez <span class="text-emerald-600 dark:text-emerald-400">'help'</span> pour voir les commandes disponibles ou cliquez sur un raccourci ci-dessus.</div>
+            </div>
+
+            <!-- Ligne de saisie -->
+            <form id="terminal-form" class="bg-slate-50 dark:bg-slate-950/70 px-5 py-3 border-t border-slate-200 dark:border-slate-800 flex items-center gap-2">
+                <span class="text-emerald-600 dark:text-emerald-400 font-bold shrink-0">arthur@portfolio</span>
+                <span class="text-slate-500 shrink-0">:</span>
+                <span class="text-blue-600 dark:text-blue-400 font-bold shrink-0">~</span>
+                <span class="text-slate-400 shrink-0">$</span>
+                <input id="terminal-input" type="text" autocomplete="off" spellcheck="false" placeholder="Tapez une commande (ex: help, cd projects, cat skills.txt)..." class="w-full bg-transparent text-slate-800 dark:text-white focus:outline-none placeholder-slate-400 dark:placeholder-slate-600">
+            </form>
+        </div>
+    </div>
 
     <!-- LIGHTBOX MODAL -->
     <div id="lightbox-modal" class="fixed inset-0 z-[100] hidden bg-slate-900/95 backdrop-blur-sm flex items-center justify-center transition-opacity opacity-0">
@@ -661,7 +894,427 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-            // --- Menu Mobile ---
+            // --- 1. Logique du Terminal Interactif (Easter Egg) ---
+            const terminalModal = document.getElementById('terminal-modal');
+            const terminalWindow = document.getElementById('terminal-window');
+            const terminalToggle = document.getElementById('terminal-toggle');
+            const terminalCloseDot = document.getElementById('terminal-close-dot');
+            const terminalMinDot = document.getElementById('terminal-min-dot');
+            const terminalBody = document.getElementById('terminal-body');
+            const terminalForm = document.getElementById('terminal-form');
+            const terminalInput = document.getElementById('terminal-input');
+            const terminalLoginDate = document.getElementById('terminal-login-date');
+
+            if (terminalLoginDate) {
+                terminalLoginDate.textContent = new Date().toUTCString();
+            }
+
+            const commandHistory = [];
+            let historyIndex = -1;
+
+            const sectionMap = {
+                'about': '#about',
+                'projects': '#projects',
+                'education': '#education',
+                'experience': '#experience',
+                'volunteering': '#volunteering',
+                'recommendations': '#recommendations'
+            };
+
+            const openTerminal = () => {
+                terminalModal.classList.remove('hidden');
+                setTimeout(() => {
+                    terminalModal.classList.remove('opacity-0');
+                    terminalWindow.classList.remove('scale-95');
+                    terminalWindow.classList.add('scale-100');
+                    terminalInput.focus();
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeTerminal = () => {
+                terminalModal.classList.add('opacity-0');
+                terminalWindow.classList.remove('scale-100');
+                terminalWindow.classList.add('scale-95');
+                setTimeout(() => {
+                    terminalModal.classList.add('hidden');
+                }, 200);
+                document.body.style.overflow = '';
+            };
+
+            if (terminalToggle) terminalToggle.addEventListener('click', openTerminal);
+            if (terminalCloseDot) terminalCloseDot.addEventListener('click', closeTerminal);
+            if (terminalMinDot) terminalMinDot.addEventListener('click', closeTerminal);
+
+            terminalModal.addEventListener('click', (e) => {
+                if (e.target === terminalModal) closeTerminal();
+            });
+
+            // Raccourci clavier Cmd+K / Ctrl+K
+            document.addEventListener('keydown', (e) => {
+                if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+                    e.preventDefault();
+                    if (terminalModal.classList.contains('hidden')) {
+                        openTerminal();
+                    } else {
+                        closeTerminal();
+                    }
+                } else if (e.key === 'Escape' && !terminalModal.classList.contains('hidden')) {
+                    closeTerminal();
+                }
+            });
+
+            const appendTerminalLine = (htmlContent, isCommand = false) => {
+                const div = document.createElement('div');
+                if (isCommand) {
+                    div.innerHTML = `<span class="text-emerald-600 dark:text-emerald-400 font-bold">arthur@portfolio</span>:<span class="text-blue-600 dark:text-blue-400 font-bold">~</span>$ <span class="text-slate-800 dark:text-slate-200">${htmlContent}</span>`;
+                } else {
+                    div.innerHTML = htmlContent;
+                }
+                terminalBody.appendChild(div);
+                terminalBody.scrollTop = terminalBody.scrollHeight;
+            };
+
+            const navigateToSection = (sectionKey) => {
+                const targetSelector = sectionMap[sectionKey];
+                if (targetSelector) {
+                    appendTerminalLine(`<span class="text-emerald-600 dark:text-emerald-400">Navigation vers ${targetSelector}...</span>`);
+                    setTimeout(() => {
+                        closeTerminal();
+                        const el = document.querySelector(targetSelector);
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }, 350);
+                } else {
+                    appendTerminalLine(`<span class="text-rose-600 dark:text-rose-400">cd: section introuvable : ${sectionKey}. Disponibles : ${Object.keys(sectionMap).join(', ')}</span>`);
+                }
+            };
+
+            const executeCommand = (rawCmd) => {
+                const cmd = rawCmd.trim();
+                if (!cmd) return;
+
+                appendTerminalLine(cmd.replace(/</g, '&lt;').replace(/>/g, '&gt;'), true);
+                commandHistory.push(cmd);
+                historyIndex = commandHistory.length;
+
+                const lower = cmd.toLowerCase();
+                const parts = lower.split(/\s+/);
+
+                if (lower === 'help') {
+                    appendTerminalLine(`
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-xs bg-slate-50 dark:bg-slate-800/60 p-3 rounded-xl border border-slate-200 dark:border-slate-700/60">
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">whoami</span> — Résumé du profil</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">ls</span> — Lister les sections</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">cd &lt;section&gt;</span> — Aller à une section</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">cat skills.txt</span> — Voir la stack technique</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">projects</span> — Lister les projets phares</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">resume</span> — Télécharger CV-fr.pdf</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">contact</span> — Afficher les contacts</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">theme</span> — Basculer le mode Sombre/Clair</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">clear</span> — Effacer le terminal</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">exit</span> — Fermer le terminal</div>
+                        </div>
+                    `);
+                } else if (lower === 'whoami' || lower === 'about') {
+                    appendTerminalLine(`
+                        <div class="text-slate-600 dark:text-slate-300">
+                            <span class="text-slate-900 dark:text-white font-bold">Arthur Louette</span> — Ingénieur Logiciel & IA (Diplômé en Juin 2027).<br>
+                            • Master en Sciences Informatiques & IA @ <span class="text-indigo-600 dark:text-indigo-400">École Polytechnique de Louvain</span> (Erasmus @ <span class="text-indigo-600 dark:text-indigo-400">Université de Padoue</span>).<br>
+                            • Mémoire de fin d'études sur la calibration des LLM @ <span class="text-emerald-600 dark:text-emerald-400">BNP Paribas Fortis</span>.<br>
+                            • Passionné par les architectures résilientes, l'IA respectueuse de la vie privée et la FinTech.
+                        </div>
+                    `);
+                } else if (lower === 'ls' || lower === 'sections') {
+                    appendTerminalLine(`
+                        <div class="flex flex-wrap gap-3 text-cyan-600 dark:text-cyan-400 font-bold">
+                            <span>about/</span>
+                            <span>projects/</span>
+                            <span>education/</span>
+                            <span>experience/</span>
+                            <span>volunteering/</span>
+                            <span>recommendations/</span>
+                        </div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Astuce : tapez <span class="text-emerald-600 dark:text-emerald-400">cd projects</span> ou <span class="text-emerald-600 dark:text-emerald-400">cd experience</span> pour naviguer directement.</div>
+                    `);
+                } else if (parts[0] === 'cd' || parts[0] === 'goto') {
+                    const target = (parts[1] || 'about').replace(/^#/, '').replace(/\/$/, '');
+                    navigateToSection(target);
+                } else if (sectionMap[lower.replace(/^#/, '')]) {
+                    navigateToSection(lower.replace(/^#/, ''));
+                } else if (lower === 'cat skills.txt' || lower === 'skills') {
+                    appendTerminalLine(`
+                        <div class="space-y-1 text-xs bg-slate-50 dark:bg-slate-800/60 p-3 rounded-xl border border-slate-200 dark:border-slate-700/60">
+                            <div><span class="text-blue-600 dark:text-blue-400 font-bold">[Langages]</span> Swift, Python, C, C++, Java, JavaScript, SQL, Bash</div>
+                            <div><span class="text-purple-600 dark:text-purple-400 font-bold">[IA & Data]</span> LangChain, Ollama, ChromaDB, PyTorch, XAI, Calibration de modèles</div>
+                            <div><span class="text-amber-600 dark:text-amber-400 font-bold">[Web & Cloud]</span> FastAPI, Flask, Supabase, Tailwind CSS, APIs REST</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">[Systèmes]</span> macOS Natif (SwiftUI/SwiftData), Portage ARM64, Make, LLVM, Git</div>
+                        </div>
+                    `);
+                } else if (lower === 'projects') {
+                    appendTerminalLine(`
+                        <div class="space-y-1 text-xs">
+                            <div>• <a href="https://arthvrr.github.io/BlueChip/" target="_blank" class="text-blue-600 dark:text-blue-400 underline font-bold">BlueChip</a> — Application native macOS de suivi de portefeuille boursier (SwiftUI, SwiftData)</div>
+                            <div>• <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-emerald-600 dark:text-emerald-400 underline font-bold">MyRAG</a> — Assistant IA RAG local 100% privé (Python, LangChain, Ollama)</div>
+                            <div>• <a href="https://azimut-app.be" target="_blank" class="text-orange-600 dark:text-orange-400 underline font-bold">Azimut</a> — Plateforme SaaS conforme RGPD pour unités scoutes (FastAPI, Supabase)</div>
+                            <div>• <a href="https://intrinsic-app.eu" target="_blank" class="text-indigo-600 dark:text-indigo-400 underline font-bold">Intrinsic</a> — Application native macOS d'évaluation d'actions par DCF</div>
+                            <div>• <a href="https://arthvrr.github.io/Bloc.us/" target="_blank" class="text-cyan-600 dark:text-cyan-400 underline font-bold">Bloc.us</a> — Outil natif macOS de suivi de sessions d'étude</div>
+                            <div>• <a href="https://mytob.be" target="_blank" class="text-amber-600 dark:text-amber-400 underline font-bold">MyTOB.be</a> — Calculateur automatisé de la TOB belge & générateur PDF</div>
+                        </div>
+                    `);
+                } else if (lower === 'resume' || lower === 'cv') {
+                    appendTerminalLine(`<span class="text-emerald-600 dark:text-emerald-400">Ouverture de CV-fr.pdf...</span>`);
+                    window.open('CV-fr.pdf', '_blank');
+                } else if (lower === 'contact') {
+                    appendTerminalLine(`
+                        <div class="text-xs space-y-1">
+                            <div>📧 Email : <a href="mailto:arthurlouette12@gmail.com" class="text-blue-600 dark:text-blue-400 underline">arthurlouette12@gmail.com</a></div>
+                            <div>💼 LinkedIn : <a href="https://www.linkedin.com/in/arthurlouette/" target="_blank" class="text-blue-600 dark:text-blue-400 underline">linkedin.com/in/arthurlouette</a></div>
+                            <div>🐙 GitHub : <a href="https://github.com/Arthvrr" target="_blank" class="text-blue-600 dark:text-blue-400 underline">github.com/Arthvrr</a></div>
+                        </div>
+                    `);
+                } else if (lower === 'theme') {
+                    document.getElementById('theme-toggle').click();
+                    const mode = document.documentElement.classList.contains('dark') ? 'Sombre' : 'Clair';
+                    appendTerminalLine(`<span class="text-emerald-600 dark:text-emerald-400">Thème de l'interface basculé en mode ${mode}.</span>`);
+                } else if (lower.startsWith('sudo hire')) {
+                    appendTerminalLine(`
+                        <div class="p-3 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-500/40 rounded-xl text-emerald-800 dark:text-emerald-300 text-xs">
+                            <div class="font-bold text-emerald-600 dark:text-emerald-400 mb-1">[SUCCÈS] Vérification du candidat terminée ✅</div>
+                            Prêt à concevoir des systèmes IA et financiers sécurisés à fort impact dès septembre 2027.<br>
+                            👉 <a href="mailto:arthurlouette12@gmail.com?subject=Opportunit%C3%A9%20-%20Arthur%20Louette" class="underline font-bold text-emerald-900 dark:text-white">Cliquez ici pour initier un entretien</a>
+                        </div>
+                    `);
+                } else if (lower === 'clear') {
+                    terminalBody.innerHTML = '';
+                } else if (lower === 'exit' || lower === 'quit') {
+                    closeTerminal();
+                } else {
+                    appendTerminalLine(`<span class="text-rose-600 dark:text-rose-400">zsh: commande introuvable : ${cmd.replace(/</g, '&lt;')}. Tapez <span class="text-emerald-600 dark:text-emerald-400">'help'</span> pour voir la liste des commandes.</span>`);
+                }
+            };
+
+            if (terminalForm) {
+                terminalForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const val = terminalInput.value;
+                    terminalInput.value = '';
+                    executeCommand(val);
+                });
+            }
+
+            // Navigation dans l'historique et autocomplétion Tab
+            if (terminalInput) {
+                terminalInput.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        if (historyIndex > 0) {
+                            historyIndex--;
+                            terminalInput.value = commandHistory[historyIndex];
+                        }
+                    } else if (e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        if (historyIndex < commandHistory.length - 1) {
+                            historyIndex++;
+                            terminalInput.value = commandHistory[historyIndex];
+                        } else {
+                            historyIndex = commandHistory.length;
+                            terminalInput.value = '';
+                        }
+                    } else if (e.key === 'Tab') {
+                        e.preventDefault();
+                        const current = terminalInput.value.toLowerCase();
+                        const allCmds = ['help', 'whoami', 'ls', 'cat skills.txt', 'projects', 'resume', 'contact', 'theme', 'clear', 'exit', 'sudo hire arthur', 'cd about', 'cd projects', 'cd education', 'cd experience', 'cd volunteering', 'cd recommendations'];
+                        const match = allCmds.find(c => c.startsWith(current));
+                        if (match) terminalInput.value = match;
+                    }
+                });
+            }
+
+            document.querySelectorAll('.term-chip').forEach(chip => {
+                chip.addEventListener('click', () => {
+                    executeCommand(chip.getAttribute('data-cmd'));
+                    terminalInput.focus();
+                });
+            });
+
+            // --- 2. Graphique des Contributions GitHub (jogruber API v4) ---
+            const ghGrid = document.getElementById('gh-grid');
+            const ghMonths = document.getElementById('gh-months');
+            const ghTotalCount = document.getElementById('gh-total-count');
+            const ghHoverInfo = document.getElementById('gh-hover-info');
+            const ghYearBtns = document.querySelectorAll('.gh-year-btn');
+
+            const levelClasses = [
+                'bg-slate-200 dark:bg-slate-700/70',
+                'bg-emerald-200 dark:bg-emerald-900/70',
+                'bg-emerald-400 dark:bg-emerald-700',
+                'bg-emerald-500 dark:bg-emerald-500',
+                'bg-emerald-600 dark:bg-emerald-400'
+            ];
+
+            const loadGitHubContributions = async (year = 'last') => {
+                if (!ghGrid) return;
+                ghTotalCount.textContent = 'Récupération des contributions depuis GitHub...';
+                ghGrid.innerHTML = '<div class="text-xs text-slate-400 py-8 font-mono">Chargement de la matrice de contributions...</div>';
+
+                try {
+                    const res = await fetch(`https://github-contributions-api.jogruber.de/v4/Arthvrr?y=${year}`);
+                    if (!res.ok) throw new Error('API request failed');
+                    const data = await res.json();
+
+                    const total = year === 'last' ? data.total.lastYear : data.total[year];
+                    const periodLabel = year === 'last' ? 'sur la dernière année' : `en ${year}`;
+                    ghTotalCount.textContent = `${total ?? 0} contributions ${periodLabel} (@Arthvrr)`;
+
+                    const contributions = data.contributions || [];
+                    ghGrid.innerHTML = '';
+                    ghMonths.innerHTML = '';
+
+                    if (contributions.length === 0) return;
+
+                    // En-têtes des mois
+                    const monthNames = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'];
+                    const seenMonths = [];
+                    contributions.forEach(item => {
+                        const m = new Date(item.date).getMonth();
+                        if (seenMonths[seenMonths.length - 1] !== m) {
+                            seenMonths.push(m);
+                        }
+                    });
+                    seenMonths.slice(0, 12).forEach(m => {
+                        const span = document.createElement('span');
+                        span.textContent = monthNames[m];
+                        ghMonths.appendChild(span);
+                    });
+
+                    // Regroupement par semaines (Dimanche = 0 à Samedi = 6)
+                    let weeks = [];
+                    let currentWeek = [];
+
+                    const firstDate = new Date(contributions[0].date);
+                    const startDayOfWeek = firstDate.getDay();
+                    for (let i = 0; i < startDayOfWeek; i++) {
+                        currentWeek.push(null);
+                    }
+
+                    contributions.forEach(day => {
+                        currentWeek.push(day);
+                        if (currentWeek.length === 7) {
+                            weeks.push(currentWeek);
+                            currentWeek = [];
+                        }
+                    });
+                    if (currentWeek.length > 0) {
+                        weeks.push(currentWeek);
+                    }
+
+                    weeks.forEach(week => {
+                        const col = document.createElement('div');
+                        col.className = 'flex flex-col gap-[3px] flex-1';
+
+                        for (let i = 0; i < 7; i++) {
+                            const day = week[i];
+                            const cell = document.createElement('div');
+                            if (!day) {
+                                cell.className = 'w-2.5 h-2.5 rounded-[2px] bg-transparent';
+                            } else {
+                                const lvl = Math.min(Math.max(day.level || 0, 0), 4);
+                                cell.className = `w-2.5 h-2.5 rounded-[2px] ${levelClasses[lvl]} transition-transform hover:scale-125 hover:ring-1 hover:ring-slate-400 cursor-pointer`;
+                                cell.addEventListener('mouseenter', () => {
+                                    const formattedDate = new Date(day.date).toLocaleDateString('fr-FR', {
+                                        month: 'short',
+                                        day: 'numeric',
+                                        year: 'numeric'
+                                    });
+                                    ghHoverInfo.innerHTML = `<strong class="text-slate-800 dark:text-white">${day.count} contribution${day.count <= 1 ? '' : 's'}</strong> le ${formattedDate}`;
+                                });
+                            }
+                            col.appendChild(cell);
+                        }
+                        ghGrid.appendChild(col);
+                    });
+                } catch (err) {
+                    ghTotalCount.textContent = 'Voir le graphique complet sur GitHub (@Arthvrr)';
+                    ghGrid.innerHTML = `<a href="https://github.com/Arthvrr" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 underline py-4">Ouvrir le profil GitHub →</a>`;
+                }
+            };
+
+            loadGitHubContributions('last');
+
+            ghYearBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    ghYearBtns.forEach(b => {
+                        b.classList.remove('bg-blue-600', 'text-white');
+                        b.classList.add('text-slate-600', 'dark:text-slate-400');
+                    });
+                    btn.classList.add('bg-blue-600', 'text-white');
+                    btn.classList.remove('text-slate-600', 'dark:text-slate-400');
+                    loadGitHubContributions(btn.getAttribute('data-gh-year'));
+                });
+            });
+
+            // --- 3. Journey (Avant/Après) Toggle Logic ---
+            const btnPast = document.getElementById('btn-past');
+            const btnPresent = document.getElementById('btn-present');
+            const imgPast = document.getElementById('journey-img-past');
+            const imgPresent = document.getElementById('journey-img-present');
+            const textPast = document.getElementById('text-past');
+            const textPresent = document.getElementById('text-present');
+
+            const switchToPresent = () => {
+                btnPresent.classList.add('bg-blue-600', 'text-white', 'shadow-sm');
+                btnPresent.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:text-slate-900', 'dark:hover:text-white');
+                btnPast.classList.remove('bg-blue-600', 'text-white', 'shadow-sm');
+                btnPast.classList.add('text-slate-600', 'dark:text-slate-300', 'hover:text-slate-900', 'dark:hover:text-white');
+                
+                imgPast.classList.remove('opacity-100');
+                imgPast.classList.add('opacity-0');
+                imgPresent.classList.remove('opacity-0');
+                imgPresent.classList.add('opacity-100');
+
+                textPast.classList.remove('opacity-100', 'translate-y-0');
+                textPast.classList.add('opacity-0', '-translate-y-4');
+                setTimeout(() => {
+                    textPast.classList.add('hidden');
+                    textPresent.classList.remove('hidden');
+                    setTimeout(() => {
+                        textPresent.classList.remove('opacity-0', 'translate-y-4');
+                        textPresent.classList.add('opacity-100', 'translate-y-0');
+                    }, 50);
+                }, 300);
+            };
+
+            const switchToPast = () => {
+                btnPast.classList.add('bg-blue-600', 'text-white', 'shadow-sm');
+                btnPast.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:text-slate-900', 'dark:hover:text-white');
+                btnPresent.classList.remove('bg-blue-600', 'text-white', 'shadow-sm');
+                btnPresent.classList.add('text-slate-600', 'dark:text-slate-300', 'hover:text-slate-900', 'dark:hover:text-white');
+                
+                imgPresent.classList.remove('opacity-100');
+                imgPresent.classList.add('opacity-0');
+                imgPast.classList.remove('opacity-0');
+                imgPast.classList.add('opacity-100');
+
+                textPresent.classList.remove('opacity-100', 'translate-y-0');
+                textPresent.classList.add('opacity-0', 'translate-y-4');
+                setTimeout(() => {
+                    textPresent.classList.add('hidden');
+                    textPast.classList.remove('hidden');
+                    setTimeout(() => {
+                        textPast.classList.remove('opacity-0', '-translate-y-4');
+                        textPast.classList.add('opacity-100', 'translate-y-0');
+                    }, 50);
+                }, 300);
+            };
+
+            textPresent.classList.add('hidden');
+
+            if(btnPast && btnPresent) {
+                btnPresent.addEventListener('click', switchToPresent);
+                btnPast.addEventListener('click', switchToPast);
+            }
+
+            // --- 4. Menu Mobile ---
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileMenuIcon = mobileMenuBtn.querySelector('i');
@@ -685,7 +1338,7 @@
                 });
             });
 
-            // --- Scroll Reveal ---
+            // --- 5. Scroll Reveal ---
             const reveals = document.querySelectorAll('.reveal');
             const revealOnScroll = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -699,7 +1352,7 @@
             });
             reveals.forEach(reveal => revealOnScroll.observe(reveal));
 
-            // --- Gestion Dynamique des Images (Clair/Sombre) ---
+            // --- 6. Gestion Dynamique des Images (Clair/Sombre) ---
             const updateImagesPath = (isDark) => {
                 const themeFolder = isDark ? 'dark' : 'light';
                 const sliders = document.querySelectorAll('.slider-container');
@@ -710,19 +1363,16 @@
                         const images = slider.querySelectorAll('.slider-img');
                         images.forEach(img => {
                             const index = img.getAttribute('data-index');
-                            // Exemple: Azimut/dark/1.png
                             img.src = `${projectName}/${themeFolder}/${index}.png`;
                         });
                     }
                 });
             };
 
-            // Initialisation des images au chargement
             const initialIsDark = document.documentElement.classList.contains('dark');
             updateImagesPath(initialIsDark);
 
-
-            // --- Lightbox / Zoom Logic ---
+            // --- 7. Lightbox / Zoom Logic ---
             const lightbox = document.getElementById('lightbox-modal');
             const lightboxImg = document.getElementById('lightbox-img');
             const lightboxClose = document.getElementById('lightbox-close');
@@ -785,7 +1435,7 @@
                 }
             });
 
-            // --- Sliders ---
+            // --- 8. Sliders ---
             const sliders = document.querySelectorAll('.slider-container');
             sliders.forEach(slider => {
                 const images = slider.querySelectorAll('.slider-img');
@@ -794,10 +1444,8 @@
                 
                 let currentIndex = 0;
 
-                // Clic sur l'image pour ouvrir le zoom
                 if (images.length > 0) {
                     slider.addEventListener('click', (e) => {
-                        // Empêcher l'ouverture si on clique sur les flèches du slider
                         if(!e.target.closest('button')) {
                             openLightbox(images, currentIndex);
                         }
@@ -850,7 +1498,7 @@
                 }
             });
 
-            // --- Dark Mode & Switch ---
+            // --- 9. Dark Mode & Switch ---
             const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
             const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
             const themeToggleBtn = document.getElementById('theme-toggle');
@@ -868,15 +1516,13 @@
                 const isDarkNow = document.documentElement.classList.contains('dark');
                 
                 if (isDarkNow) {
-                    // Passage en mode clair
                     document.documentElement.classList.remove('dark');
                     localStorage.setItem('color-theme', 'light');
-                    updateImagesPath(false); // MAJ des images
+                    updateImagesPath(false);
                 } else {
-                    // Passage en mode sombre
                     document.documentElement.classList.add('dark');
                     localStorage.setItem('color-theme', 'dark');
-                    updateImagesPath(true); // MAJ des images
+                    updateImagesPath(true);
                 }
             });
         });

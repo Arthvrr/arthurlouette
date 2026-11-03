@@ -270,7 +270,7 @@
                 <p class="text-slate-600 dark:text-slate-400 mb-6 text-sm">Passions and activities that shape my profile:</p>
                 <div class="flex flex-wrap gap-3">
                     <span class="px-4 py-2.5 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-200 rounded-xl text-sm font-medium flex items-center gap-2 cursor-default">
-                        <i class="fa-solid fa-campground text-orange-500 text-lg"></i> Scouting (Unit Leader)
+                        <i class="fa-solid fa-campground text-orange-500 text-lg"></i> Scouting
                     </span>
                     <span class="px-4 py-2.5 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-200 rounded-xl text-sm font-medium flex items-center gap-2 cursor-default">
                         <i class="fa-solid fa-chart-line text-emerald-500 text-lg"></i> Stock Market Investing
@@ -794,11 +794,11 @@
                     </p>
                     <div class="flex items-center justify-between mt-auto">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center text-xl font-bold text-blue-600 dark:text-blue-400">
-                                VR
-                            </div>
+                            <!-- Remplacement des initiales par la photo -->
+                            <img src="peoples/VanRoy.jpeg" alt="Professor Peter Van Roy" class="w-12 h-12 rounded-full object-cover shadow-sm border border-slate-200 dark:border-slate-700 shrink-0">
+                            
                             <div>
-                                <h4 class="font-bold text-slate-800 dark:text-white">Prof. Peter Van Roy</h4>
+                                <h4 class="font-bold text-slate-800 dark:text-white">Professor Peter Van Roy</h4>
                                 <p class="text-sm text-slate-500 dark:text-slate-400">UCLouvain ICTEAM Institute</p>
                             </div>
                         </div>
@@ -808,7 +808,7 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 relative">
+                <!-- <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 relative">
                     <i class="fa-solid fa-quote-left text-4xl text-blue-100 dark:text-slate-700 absolute top-6 left-6"></i>
                     <p class="text-slate-600 dark:text-slate-300 italic mb-8 relative z-10 pt-6 leading-relaxed">
                         <span class="text-slate-400 dark:text-slate-500">[ Awaiting official recommendation following the completion of my Master's thesis internship on AI model calibration in supervised classification. ]</span>
@@ -822,7 +822,7 @@
                             <p class="text-sm text-slate-500 dark:text-slate-400">Internship Supervisor, BNP Paribas Fortis</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -833,45 +833,45 @@
 
     <!-- INTERACTIVE TERMINAL MODAL (EASTER EGG) -->
     <div id="terminal-modal" class="fixed inset-0 z-[110] hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity opacity-0">
-        <div class="w-full max-w-3xl bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden font-mono text-sm transform scale-95 transition-transform duration-200" id="terminal-window">
+        <div class="w-full max-w-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden font-mono text-sm transform scale-95 transition-transform duration-200" id="terminal-window">
             <!-- macOS Window Titlebar -->
-            <div class="bg-slate-800/90 px-4 py-3 flex items-center justify-between border-b border-slate-700/80">
+            <div class="bg-slate-100 dark:bg-slate-800/90 px-4 py-3 flex items-center justify-between border-b border-slate-200 dark:border-slate-700/80">
                 <div class="flex items-center gap-2">
                     <button id="terminal-close-dot" class="w-3.5 h-3.5 rounded-full bg-rose-500 hover:bg-rose-600 transition focus:outline-none" title="Close"></button>
                     <button id="terminal-min-dot" class="w-3.5 h-3.5 rounded-full bg-amber-400 hover:bg-amber-500 transition focus:outline-none" title="Minimize"></button>
                     <span class="w-3.5 h-3.5 rounded-full bg-emerald-500 inline-block"></span>
                 </div>
-                <div class="text-xs text-slate-400 flex items-center gap-2">
-                    <i class="fa-brands fa-apple text-slate-300"></i>
+                <div class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-2 font-medium">
+                    <i class="fa-brands fa-apple text-slate-400 dark:text-slate-300"></i>
                     <span>arthur@macbook-pro: ~/portfolio (zsh)</span>
                 </div>
-                <div class="text-[11px] text-slate-500">ESC to close</div>
+                <div class="text-[11px] text-slate-400 dark:text-slate-500">ESC to close</div>
             </div>
 
             <!-- Quick Command Chips -->
-            <div class="bg-slate-900/90 px-4 py-2 border-b border-slate-800 flex flex-wrap items-center gap-1.5 text-xs">
+            <div class="bg-slate-50 dark:bg-slate-900/90 px-4 py-2 border-b border-slate-200 dark:border-slate-800 flex flex-wrap items-center gap-1.5 text-xs">
                 <span class="text-slate-500 mr-1">Quick run:</span>
-                <button data-cmd="help" class="term-chip px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-emerald-400 rounded transition">help</button>
-                <button data-cmd="whoami" class="term-chip px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-blue-400 rounded transition">whoami</button>
-                <button data-cmd="cat skills.txt" class="term-chip px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-purple-400 rounded transition">cat skills.txt</button>
-                <button data-cmd="ls" class="term-chip px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-amber-400 rounded transition">ls</button>
-                <button data-cmd="cd projects" class="term-chip px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-cyan-400 rounded transition">cd projects</button>
-                <button data-cmd="sudo hire arthur" class="term-chip px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-rose-400 rounded transition">sudo hire arthur</button>
+                <button data-cmd="help" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-emerald-600 dark:text-emerald-400 rounded transition">help</button>
+                <button data-cmd="whoami" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-blue-600 dark:text-blue-400 rounded transition">whoami</button>
+                <button data-cmd="cat skills.txt" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-purple-600 dark:text-purple-400 rounded transition">cat skills.txt</button>
+                <button data-cmd="ls" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-amber-600 dark:text-amber-400 rounded transition">ls</button>
+                <button data-cmd="cd projects" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-cyan-600 dark:text-cyan-400 rounded transition">cd projects</button>
+                <button data-cmd="sudo hire arthur" class="term-chip px-2 py-0.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-rose-600 dark:text-rose-400 rounded transition">sudo hire arthur</button>
             </div>
 
             <!-- Terminal Output Body -->
-            <div id="terminal-body" class="p-5 h-[360px] overflow-y-auto custom-scrollbar space-y-2 text-slate-200 leading-relaxed">
-                <div class="text-slate-400">Last login: <span id="terminal-login-date"></span> on ttys001</div>
-                <div>Welcome to <span class="text-blue-400 font-bold">ArthurOS v2.7</span> (ARM64). Type <span class="text-emerald-400">'help'</span> to see available commands or click a shortcut above.</div>
+            <div id="terminal-body" class="p-5 h-[360px] overflow-y-auto custom-scrollbar space-y-2 text-slate-800 dark:text-slate-200 leading-relaxed bg-white dark:bg-slate-900">
+                <div class="text-slate-500 dark:text-slate-400">Last login: <span id="terminal-login-date"></span> on ttys001</div>
+                <div>Welcome to <span class="text-blue-600 dark:text-blue-400 font-bold">ArthurOS v2.7</span> (ARM64). Type <span class="text-emerald-600 dark:text-emerald-400">'help'</span> to see available commands or click a shortcut above.</div>
             </div>
 
             <!-- Input Prompt Line -->
-            <form id="terminal-form" class="bg-slate-950/70 px-5 py-3 border-t border-slate-800 flex items-center gap-2">
-                <span class="text-emerald-400 font-bold shrink-0">arthur@portfolio</span>
+            <form id="terminal-form" class="bg-slate-50 dark:bg-slate-950/70 px-5 py-3 border-t border-slate-200 dark:border-slate-800 flex items-center gap-2">
+                <span class="text-emerald-600 dark:text-emerald-400 font-bold shrink-0">arthur@portfolio</span>
                 <span class="text-slate-500 shrink-0">:</span>
-                <span class="text-blue-400 font-bold shrink-0">~</span>
+                <span class="text-blue-600 dark:text-blue-400 font-bold shrink-0">~</span>
                 <span class="text-slate-400 shrink-0">$</span>
-                <input id="terminal-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type a command (e.g., help, cd projects, cat skills.txt)..." class="w-full bg-transparent text-white focus:outline-none placeholder-slate-600">
+                <input id="terminal-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type a command (e.g., help, cd projects, cat skills.txt)..." class="w-full bg-transparent text-slate-800 dark:text-white focus:outline-none placeholder-slate-400 dark:placeholder-slate-600">
             </form>
         </div>
     </div>
@@ -967,7 +967,7 @@
             const appendTerminalLine = (htmlContent, isCommand = false) => {
                 const div = document.createElement('div');
                 if (isCommand) {
-                    div.innerHTML = `<span class="text-emerald-400 font-bold">arthur@portfolio</span>:<span class="text-blue-400 font-bold">~</span>$ <span class="text-white">${htmlContent}</span>`;
+                    div.innerHTML = `<span class="text-emerald-600 dark:text-emerald-400 font-bold">arthur@portfolio</span>:<span class="text-blue-600 dark:text-blue-400 font-bold">~</span>$ <span class="text-slate-800 dark:text-slate-200">${htmlContent}</span>`;
                 } else {
                     div.innerHTML = htmlContent;
                 }
@@ -1002,31 +1002,31 @@
 
                 if (lower === 'help') {
                     appendTerminalLine(`
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-xs bg-slate-800/60 p-3 rounded-xl border border-slate-700/60">
-                            <div><span class="text-emerald-400 font-bold">whoami</span> — Profile summary</div>
-                            <div><span class="text-emerald-400 font-bold">ls</span> — List page sections</div>
-                            <div><span class="text-emerald-400 font-bold">cd &lt;section&gt;</span> — Jump to a section</div>
-                            <div><span class="text-emerald-400 font-bold">cat skills.txt</span> — View tech stack</div>
-                            <div><span class="text-emerald-400 font-bold">projects</span> — List featured projects</div>
-                            <div><span class="text-emerald-400 font-bold">resume</span> — Download CV.pdf</div>
-                            <div><span class="text-emerald-400 font-bold">contact</span> — Display contact channels</div>
-                            <div><span class="text-emerald-400 font-bold">theme</span> — Toggle Dark/Light mode</div>
-                            <div><span class="text-emerald-400 font-bold">clear</span> — Clear terminal screen</div>
-                            <div><span class="text-emerald-400 font-bold">exit</span> — Close terminal</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-xs bg-slate-50 dark:bg-slate-800/60 p-3 rounded-xl border border-slate-200 dark:border-slate-700/60">
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">whoami</span> — Profile summary</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">ls</span> — List page sections</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">cd &lt;section&gt;</span> — Jump to a section</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">cat skills.txt</span> — View tech stack</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">projects</span> — List featured projects</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">resume</span> — Download CV.pdf</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">contact</span> — Display contact channels</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">theme</span> — Toggle Dark/Light mode</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">clear</span> — Clear terminal screen</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">exit</span> — Close terminal</div>
                         </div>
                     `);
                 } else if (lower === 'whoami' || lower === 'about') {
                     appendTerminalLine(`
-                        <div class="text-slate-300">
-                            <span class="text-white font-bold">Arthur Louette</span> — AI & Software Engineer (Graduating June 2027).<br>
-                            • Master's in CS & AI @ <span class="text-indigo-400">UCLouvain</span> (Erasmus @ <span class="text-indigo-400">University of Padua</span>).<br>
-                            • Upcoming Master's Thesis on LLM Calibration @ <span class="text-emerald-400">BNP Paribas Fortis</span>.<br>
+                        <div class="text-slate-600 dark:text-slate-300">
+                            <span class="text-slate-900 dark:text-white font-bold">Arthur Louette</span> — AI & Software Engineer (Graduating June 2027).<br>
+                            • Master's in CS & AI @ <span class="text-indigo-600 dark:text-indigo-400">Louvain School of Engineering</span> (Erasmus @ <span class="text-indigo-600 dark:text-indigo-400">University of Padua</span>).<br>
+                            • Upcoming Master's Thesis on LLM Calibration @ <span class="text-emerald-600 dark:text-emerald-400">BNP Paribas Fortis</span>.<br>
                             • Passionate about resilient architectures, privacy-first AI, and FinTech systems.
                         </div>
                     `);
                 } else if (lower === 'ls' || lower === 'sections') {
                     appendTerminalLine(`
-                        <div class="flex flex-wrap gap-3 text-cyan-400 font-bold">
+                        <div class="flex flex-wrap gap-3 text-cyan-600 dark:text-cyan-400 font-bold">
                             <span>about/</span>
                             <span>projects/</span>
                             <span>education/</span>
@@ -1034,7 +1034,7 @@
                             <span>volunteering/</span>
                             <span>recommendations/</span>
                         </div>
-                        <div class="text-xs text-slate-400 mt-1">Tip: type <span class="text-emerald-400">cd projects</span> or <span class="text-emerald-400">cd experience</span> to jump directly.</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Tip: type <span class="text-emerald-600 dark:text-emerald-400">cd projects</span> or <span class="text-emerald-600 dark:text-emerald-400">cd experience</span> to jump directly.</div>
                     `);
                 } else if (parts[0] === 'cd' || parts[0] === 'goto') {
                     const target = (parts[1] || 'about').replace(/^#/, '').replace(/\/$/, '');
@@ -1043,45 +1043,45 @@
                     navigateToSection(lower.replace(/^#/, ''));
                 } else if (lower === 'cat skills.txt' || lower === 'skills') {
                     appendTerminalLine(`
-                        <div class="space-y-1 text-xs bg-slate-800/60 p-3 rounded-xl border border-slate-700/60">
-                            <div><span class="text-blue-400 font-bold">[Languages]</span> Swift, Python, C, C++, Java, JavaScript, SQL, Bash</div>
-                            <div><span class="text-purple-400 font-bold">[AI & Data]</span> LangChain, Ollama, ChromaDB, PyTorch, XAI, Model Calibration</div>
-                            <div><span class="text-amber-400 font-bold">[Web & Cloud]</span> FastAPI, Flask, Supabase, Tailwind CSS, REST APIs</div>
-                            <div><span class="text-emerald-400 font-bold">[Systems]</span> macOS Native (SwiftUI/SwiftData), ARM64 Porting, Make, LLVM, Git</div>
+                        <div class="space-y-1 text-xs bg-slate-50 dark:bg-slate-800/60 p-3 rounded-xl border border-slate-200 dark:border-slate-700/60">
+                            <div><span class="text-blue-600 dark:text-blue-400 font-bold">[Languages]</span> Swift, Python, C, C++, Java, JavaScript, SQL, Bash</div>
+                            <div><span class="text-purple-600 dark:text-purple-400 font-bold">[AI & Data]</span> LangChain, Ollama, ChromaDB, PyTorch, XAI, Model Calibration</div>
+                            <div><span class="text-amber-600 dark:text-amber-400 font-bold">[Web & Cloud]</span> FastAPI, Flask, Supabase, Tailwind CSS, REST APIs</div>
+                            <div><span class="text-emerald-600 dark:text-emerald-400 font-bold">[Systems]</span> macOS Native (SwiftUI/SwiftData), ARM64 Porting, Make, LLVM, Git</div>
                         </div>
                     `);
                 } else if (lower === 'projects') {
                     appendTerminalLine(`
                         <div class="space-y-1 text-xs">
-                            <div>• <a href="https://arthvrr.github.io/BlueChip/" target="_blank" class="text-blue-400 underline font-bold">BlueChip</a> — Native macOS stock portfolio tracker (SwiftUI, SwiftData)</div>
-                            <div>• <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-emerald-400 underline font-bold">MyRAG</a> — 100% private local RAG AI assistant (Python, LangChain, Ollama)</div>
-                            <div>• <a href="https://azimut-app.be" target="_blank" class="text-orange-400 underline font-bold">Azimut</a> — GDPR-compliant SaaS platform for Scout units (FastAPI, Supabase)</div>
-                            <div>• <a href="https://intrinsic-app.eu" target="_blank" class="text-indigo-400 underline font-bold">Intrinsic</a> — Native macOS automated DCF stock valuation app</div>
-                            <div>• <a href="https://arthvrr.github.io/Bloc.us/" target="_blank" class="text-cyan-400 underline font-bold">Bloc.us</a> — Native macOS student study session tracker</div>
-                            <div>• <a href="https://mytob.be" target="_blank" class="text-amber-400 underline font-bold">MyTOB.be</a> — Automated Belgian TOB tax calculator & PDF generator</div>
+                            <div>• <a href="https://arthvrr.github.io/BlueChip/" target="_blank" class="text-blue-600 dark:text-blue-400 underline font-bold">BlueChip</a> — Native macOS stock portfolio tracker (SwiftUI, SwiftData)</div>
+                            <div>• <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-emerald-600 dark:text-emerald-400 underline font-bold">MyRAG</a> — 100% private local RAG AI assistant (Python, LangChain, Ollama)</div>
+                            <div>• <a href="https://azimut-app.be" target="_blank" class="text-orange-600 dark:text-orange-400 underline font-bold">Azimut</a> — GDPR-compliant SaaS platform for Scout units (FastAPI, Supabase)</div>
+                            <div>• <a href="https://intrinsic-app.eu" target="_blank" class="text-indigo-600 dark:text-indigo-400 underline font-bold">Intrinsic</a> — Native macOS automated DCF stock valuation app</div>
+                            <div>• <a href="https://arthvrr.github.io/Bloc.us/" target="_blank" class="text-cyan-600 dark:text-cyan-400 underline font-bold">Bloc.us</a> — Native macOS student study session tracker</div>
+                            <div>• <a href="https://mytob.be" target="_blank" class="text-amber-600 dark:text-amber-400 underline font-bold">MyTOB.be</a> — Automated Belgian TOB tax calculator & PDF generator</div>
                         </div>
                     `);
                 } else if (lower === 'resume' || lower === 'cv') {
-                    appendTerminalLine(`<span class="text-emerald-400">Opening CV.pdf...</span>`);
+                    appendTerminalLine(`<span class="text-emerald-600 dark:text-emerald-400">Opening CV.pdf...</span>`);
                     window.open('CV.pdf', '_blank');
                 } else if (lower === 'contact') {
                     appendTerminalLine(`
                         <div class="text-xs space-y-1">
-                            <div>📧 Email: <a href="mailto:arthurlouette12@gmail.com" class="text-blue-400 underline">arthurlouette12@gmail.com</a></div>
-                            <div>💼 LinkedIn: <a href="https://www.linkedin.com/in/arthurlouette/" target="_blank" class="text-blue-400 underline">linkedin.com/in/arthurlouette</a></div>
-                            <div>🐙 GitHub: <a href="https://github.com/Arthvrr" target="_blank" class="text-blue-400 underline">github.com/Arthvrr</a></div>
+                            <div>📧 Email: <a href="mailto:arthurlouette12@gmail.com" class="text-blue-600 dark:text-blue-400 underline">arthurlouette12@gmail.com</a></div>
+                            <div>💼 LinkedIn: <a href="https://www.linkedin.com/in/arthurlouette/" target="_blank" class="text-blue-600 dark:text-blue-400 underline">linkedin.com/in/arthurlouette</a></div>
+                            <div>🐙 GitHub: <a href="https://github.com/Arthvrr" target="_blank" class="text-blue-600 dark:text-blue-400 underline">github.com/Arthvrr</a></div>
                         </div>
                     `);
                 } else if (lower === 'theme') {
                     document.getElementById('theme-toggle').click();
                     const mode = document.documentElement.classList.contains('dark') ? 'Dark' : 'Light';
-                    appendTerminalLine(`<span class="text-emerald-400">Switched interface theme to ${mode} mode.</span>`);
+                    appendTerminalLine(`<span class="text-emerald-600 dark:text-emerald-400">Switched interface theme to ${mode} mode.</span>`);
                 } else if (lower.startsWith('sudo hire')) {
                     appendTerminalLine(`
-                        <div class="p-3 bg-emerald-950/60 border border-emerald-500/40 rounded-xl text-emerald-300 text-xs">
-                            <div class="font-bold text-emerald-400 mb-1">[SUCCESS] Candidate verification complete ✅</div>
+                        <div class="p-3 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-500/40 rounded-xl text-emerald-800 dark:text-emerald-300 text-xs">
+                            <div class="font-bold text-emerald-600 dark:text-emerald-400 mb-1">[SUCCESS] Candidate verification complete ✅</div>
                             Ready to engineer secure, high-impact AI & financial systems starting September 2027.<br>
-                            👉 <a href="mailto:arthurlouette12@gmail.com?subject=Opportunity%20-%20Arthur%20Louette" class="underline font-bold text-white">Click here to initiate interview protocol</a>
+                            👉 <a href="mailto:arthurlouette12@gmail.com?subject=Opportunity%20-%20Arthur%20Louette" class="underline font-bold text-emerald-900 dark:text-white">Click here to initiate interview protocol</a>
                         </div>
                     `);
                 } else if (lower === 'clear') {
@@ -1089,7 +1089,7 @@
                 } else if (lower === 'exit' || lower === 'quit') {
                     closeTerminal();
                 } else {
-                    appendTerminalLine(`<span class="text-rose-400">zsh: command not found: ${cmd.replace(/</g, '&lt;')}. Type <span class="text-emerald-400">'help'</span> for a list of commands.</span>`);
+                    appendTerminalLine(`<span class="text-rose-600 dark:text-rose-400">zsh: command not found: ${cmd.replace(/</g, '&lt;')}. Type <span class="text-emerald-600 dark:text-emerald-400">'help'</span> for a list of commands.</span>`);
                 }
             };
 
