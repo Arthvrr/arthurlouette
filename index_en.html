@@ -319,19 +319,52 @@
                             <button class="next-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm focus:outline-none" onclick="event.stopPropagation()"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <div class="flex items-center flex-wrap gap-3 mb-4">
+                    <div class="w-full md:w-1/2 flex flex-col justify-center">
+                        <div class="flex items-center flex-wrap gap-3 mb-2">
                             <img src="projects-logo/bluechip.png" alt="BlueChip Logo" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">BlueChip</h3>
-                            <a href="https://arthvrr.github.io/BlueChip/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
-                            <a href="https://github.com/Arthvrr/BlueChip" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
+                            <a href="https://arthvrr.github.io/BlueChip/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition ml-2"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+                            <a href="https://github.com/Arthvrr/BlueChip" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-xl"></i></a>
                         </div>
-                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            A native macOS app designed for analyzing and tracking stock portfolios. A robust tool that allows you to track the performance of your investments in a clear and organized manner.
+                        
+                        <div class="flex items-center flex-wrap gap-3 mb-5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                            <span class="flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> Jan 2026 - Present</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+                            <span class="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400"><i class="fa-solid fa-user-astronaut"></i> Solo Project</span>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            A comprehensive native macOS application built to analyze and manage stock portfolios across 14 analytical modules.
                         </p>
+                        <ul class="space-y-2.5 mb-6 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>BlueChip AI Copilot:</strong> Gemini AI integration analyzes portfolio data to provide intelligent management assistance.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Local Storage:</strong> Secure, offline-first portfolio tracking utilizing <span class="text-slate-800 dark:text-slate-200 font-semibold">SwiftData</span>.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Live Integration:</strong> Real-time market data synchronization via the <span class="text-slate-800 dark:text-slate-200 font-semibold">Yahoo Finance API</span>.</span>
+                            </li>
+                        </ul>
+
+                        <div class="mb-6 bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                            <div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-rocket text-slate-400"></i> Project Status (V1.0)</span>
+                                <span class="text-indigo-600 dark:text-indigo-400">100%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-1.5">
+                                <div class="bg-gradient-to-r from-blue-500 to-indigo-500 h-1.5 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-semibold">Swift</span>
-                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-semibold">macOS Native</span>
+                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-brands fa-swift"></i> Swift & SwiftUI</span>
+                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-database"></i> SwiftData</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-server"></i> REST API</span>
                         </div>
                     </div>
                 </div>
@@ -349,21 +382,51 @@
                             <button class="next-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm focus:outline-none" onclick="event.stopPropagation()"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <div class="flex items-center flex-wrap gap-3 mb-4">
+                    <div class="w-full md:w-1/2 flex flex-col justify-center">
+                        <div class="flex items-center flex-wrap gap-3 mb-2">
                             <img src="projects-logo/myrag.png" alt="MyRAG Logo" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">MyRAG</h3>
-                            <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
-                            <a href="#" class="text-xs font-semibold text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 px-3 py-1.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition flex items-center gap-2 shadow-sm ml-auto">
-                                <i class="fa-solid fa-brain"></i> Read Tech Study
-                            </a>
+                            <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition ml-2"><i class="fa-brands fa-github text-xl"></i></a>
                         </div>
-                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Development of a local AI conversational assistant based on the Retrieval-Augmented Generation (RAG) architecture. It enables precise querying of personal knowledge bases, ensuring 100% privacy.
+
+                        <div class="flex items-center flex-wrap gap-3 mb-5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                            <span class="flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> Mar 2026 - Present</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+                            <span class="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400"><i class="fa-solid fa-user-astronaut"></i> Solo Project</span>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            Development of a local AI conversational assistant based on the Retrieval-Augmented Generation (RAG) architecture for private knowledge base querying.
                         </p>
+                        <ul class="space-y-2.5 mb-6 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Local Processing:</strong> Leveraged <span class="text-slate-800 dark:text-slate-200 font-semibold">Ollama</span> and <span class="text-slate-800 dark:text-slate-200 font-semibold">ChromaDB</span> to ensure 100% data privacy.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Quality Control:</strong> Integrated the <span class="text-slate-800 dark:text-slate-200 font-semibold">RAGAS</span> evaluation framework for response accuracy.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>User Experience:</strong> Developed a FastAPI backend supporting custom slash commands.</span>
+                            </li>
+                        </ul>
+
+                        <div class="mb-6 bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                            <div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-rocket text-slate-400"></i> Project Status (V1.0)</span>
+                                <span class="text-emerald-600 dark:text-emerald-400">80%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-1.5">
+                                <div class="bg-gradient-to-r from-emerald-500 to-teal-500 h-1.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-semibold">Python & LangChain</span>
-                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-semibold">Ollama / ChromaDB</span>
+                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-brands fa-python"></i> Python & LangChain</span>
+                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-server"></i> FastAPI</span>
+                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-database"></i> Ollama & ChromaDB</span>
                         </div>
                     </div>
                 </div>
@@ -382,23 +445,52 @@
                             <button class="next-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm focus:outline-none" onclick="event.stopPropagation()"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <div class="flex items-center flex-wrap gap-3 mb-4">
+                    <div class="w-full md:w-1/2 flex flex-col justify-center">
+                        <div class="flex items-center flex-wrap gap-3 mb-2">
                             <img src="projects-logo/azimut.png" alt="Azimut Logo" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">Azimut</h3>
-                            <a href="https://azimut-app.be" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
-                            <a href="https://github.com/Arthvrr/Azimut" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
-                            <a href="#" class="text-xs font-semibold text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 px-3 py-1.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition flex items-center gap-2 shadow-sm ml-auto">
-                                <i class="fa-solid fa-sitemap"></i> View SaaS Architecture
-                            </a>
+                            <a href="https://azimut-app.be" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition ml-2"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+                            <a href="https://github.com/Arthvrr/Azimut" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-xl"></i></a>
                         </div>
-                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            SaaS platform (Progressive Web App) designed for the administrative and communication management of scout units. Features include document centralization with automated purge (Smart Rollover) and targeted emails. Multi-role architecture ensuring <span class="font-semibold text-slate-800 dark:text-slate-200">strict data security and isolation (GDPR compliant)</span>.
+
+                        <div class="flex items-center flex-wrap gap-3 mb-5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                            <span class="flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> Jun 2026 - Present</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+                            <span class="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400"><i class="fa-solid fa-user-astronaut"></i> Solo Project</span>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            A Progressive Web App (SaaS) designed to streamline the administrative management and communication processes for scout units.
                         </p>
+                        <ul class="space-y-2.5 mb-6 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Data Security:</strong> Engineered strict data isolation and GDPR compliance for handling sensitive personal information.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Access Control:</strong> Implemented a multi-role architecture using <span class="text-slate-800 dark:text-slate-200 font-semibold">Supabase</span> for secure leader access.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Automation:</strong> Features document centralization with automated purge (Smart Rollover).</span>
+                            </li>
+                        </ul>
+
+                        <div class="mb-6 bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                            <div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-rocket text-slate-400"></i> Project Status (V1.0)</span>
+                                <span class="text-orange-600 dark:text-orange-400">100%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-1.5">
+                                <div class="bg-gradient-to-r from-orange-500 to-amber-500 h-1.5 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-xs font-semibold">Python (FastAPI)</span>
-                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-xs font-semibold">Supabase</span>
-                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-xs font-semibold">PWA</span>
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-brands fa-python"></i> Python (FastAPI)</span>
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-database"></i> Supabase</span>
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-mobile-screen-button"></i> PWA</span>
                         </div>
                     </div>
                 </div>
@@ -416,22 +508,51 @@
                             <button class="next-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm focus:outline-none" onclick="event.stopPropagation()"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <div class="flex items-center flex-wrap gap-3 mb-4">
+                    <div class="w-full md:w-1/2 flex flex-col justify-center">
+                        <div class="flex items-center flex-wrap gap-3 mb-2">
                             <img src="projects-logo/intrinsic.png" alt="Intrinsic Logo" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">Intrinsic</h3>
-                            <a href="https://intrinsic-app.eu" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
-                            <a href="https://github.com/Arthvrr/Intrinsic" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
-                            <a href="#" class="text-xs font-semibold text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 px-3 py-1.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition flex items-center gap-2 shadow-sm ml-auto">
-                                <i class="fa-solid fa-microchip"></i> Architecture & Setup
-                            </a>
+                            <a href="https://intrinsic-app.eu" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition ml-2"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+                            <a href="https://github.com/Arthvrr/Intrinsic" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-xl"></i></a>
                         </div>
-                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Native macOS application automating stock valuation via DCF models. Integrates real-time APIs (Finnhub, ExchangeRate) and multithreading to generate secure stock scenario analyses and data visualizations.
+
+                        <div class="flex items-center flex-wrap gap-3 mb-5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                            <span class="flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> Jan 2026 - Oct 2026</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+                            <span class="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400"><i class="fa-solid fa-user-astronaut"></i> Solo Project</span>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            A native macOS application that automates complex stock valuation via Discounted Cash Flow (DCF) models and sensitivity heatmaps.
                         </p>
+                        <ul class="space-y-2.5 mb-6 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Financial Modeling:</strong> Implemented automated DCF, reverse DCF, and 7x7 sensitivity heatmaps.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Performance:</strong> Utilized multithreading to handle complex data visualizations seamlessly.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>API Integration:</strong> Integrated <span class="text-slate-800 dark:text-slate-200 font-semibold">Finnhub</span> and <span class="text-slate-800 dark:text-slate-200 font-semibold">Google Gemini BYOK</span> for real-time data and AI summaries.</span>
+                            </li>
+                        </ul>
+
+                        <div class="mb-6 bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                            <div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-rocket text-slate-400"></i> Project Status (v3.0)</span>
+                                <span class="text-indigo-600 dark:text-indigo-400">100%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-1.5">
+                                <div class="bg-gradient-to-r from-blue-500 to-indigo-500 h-1.5 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-semibold">SwiftUI & XCode</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-semibold">REST APIs</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-brands fa-swift"></i> SwiftUI & XCode</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-server"></i> REST APIs</span>
                         </div>
                     </div>
                 </div>
@@ -449,19 +570,52 @@
                             <button class="next-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm focus:outline-none" onclick="event.stopPropagation()"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <div class="flex items-center flex-wrap gap-3 mb-4">
+                    <div class="w-full md:w-1/2 flex flex-col justify-center">
+                        <div class="flex items-center flex-wrap gap-3 mb-2">
                             <img src="projects-logo/blocus.png" alt="Bloc.us Logo" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">Bloc.us</h3>
-                            <a href="https://arthvrr.github.io/Bloc.us/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
-                            <a href="https://github.com/Arthvrr/Bloc.us" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
+                            <a href="https://arthvrr.github.io/Bloc.us/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition ml-2"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+                            <a href="https://github.com/Arthvrr/Bloc.us" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-xl"></i></a>
                         </div>
-                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Native macOS productivity tool designed for students. Helps structure study periods effectively, integrates focus timers, and tracks academic progress seamlessly throughout the year.
+
+                        <div class="flex items-center flex-wrap gap-3 mb-5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                            <span class="flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> May 2026 - July 2026</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+                            <span class="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400"><i class="fa-solid fa-user-astronaut"></i> Solo Project</span>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            A native macOS productivity tool built to help Belgian university students track and organize study sessions during the "blocus" exam preparation period.
                         </p>
+                        <ul class="space-y-2.5 mb-6 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Productivity:</strong> Integrates focus timers and seamlessly tracks academic progress throughout the year.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Native Environment:</strong> Coded in <span class="text-slate-800 dark:text-slate-200 font-semibold">Swift</span> for optimal performance on Apple Silicon.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>User Interface:</strong> Implemented a clean, distraction-free UI using <span class="text-slate-800 dark:text-slate-200 font-semibold">AppKit</span> frameworks.</span>
+                            </li>
+                        </ul>
+
+                        <div class="mb-6 bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                            <div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-rocket text-slate-400"></i> Project Status (V3.0)</span>
+                                <span class="text-indigo-600 dark:text-indigo-400">100%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-1.5">
+                                <div class="bg-gradient-to-r from-indigo-500 to-purple-500 h-1.5 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-semibold">Swift</span>
-                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-semibold">macOS Native</span>
+                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-brands fa-swift"></i> Swift</span>
+                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-brands fa-apple"></i> macOS Native</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-desktop"></i> AppKit</span>
                         </div>
                     </div>
                 </div>
@@ -479,19 +633,52 @@
                             <button class="next-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm focus:outline-none" onclick="event.stopPropagation()"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <div class="flex items-center flex-wrap gap-3 mb-4">
+                    <div class="w-full md:w-1/2 flex flex-col justify-center">
+                        <div class="flex items-center flex-wrap gap-3 mb-2">
                             <img src="projects-logo/mytob.png" alt="MyTOB Logo" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
                             <h3 class="text-3xl font-bold text-slate-800 dark:text-white">MyTOB.be</h3>
-                            <a href="https://mytob.be" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition"><i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i></a>
-                            <a href="https://github.com/Arthvrr/mytob.be" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
+                            <a href="https://mytob.be" target="_blank" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 transition ml-2"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+                            <a href="https://github.com/Arthvrr/mytob.be" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition"><i class="fa-brands fa-github text-xl"></i></a>
                         </div>
-                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                            Web application designed to precisely automate a complex tax task for Belgian investors: the calculation and automatic PDF generation for the Tax on Stock Exchange Transactions (TOB) declaration.
+
+                        <div class="flex items-center flex-wrap gap-3 mb-5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                            <span class="flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> Jan 2026 - Feb 2026</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+                            <span class="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400"><i class="fa-solid fa-user-astronaut"></i> Solo Project</span>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            A web platform designed for Belgian stock investors to automate the calculation of the Tax on Stock Exchange Transactions (TOB).
                         </p>
+                        <ul class="space-y-2.5 mb-6 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Automation:</strong> Features automatic PDF form generation to streamline complex tax declarations.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Integration:</strong> Integrated QR code payment systems for seamless user experience.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> 
+                                <span><strong>Client-Side Processing:</strong> Utilized the <span class="text-slate-800 dark:text-slate-200 font-semibold">jsPDF</span> library to generate documents entirely in the browser for privacy.</span>
+                            </li>
+                        </ul>
+
+                        <div class="mb-6 bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                            <div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-rocket text-slate-400"></i> Project Status (V1.0)</span>
+                                <span class="text-amber-600 dark:text-amber-400">100%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-1.5">
+                                <div class="bg-gradient-to-r from-amber-500 to-orange-500 h-1.5 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold">JavaScript</span>
-                            <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold">PDF Generation</span>
+                            <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-file-pdf"></i> PDF Generation</span>
+                            <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-brands fa-html5"></i> HTML/CSS</span>
                         </div>
                     </div>
                 </div>
@@ -645,7 +832,7 @@
                     <div class="flex items-start gap-4 mb-3">
                         <img src="logos/hayeffes.png" alt="Collège des Hayeffes Logo" class="w-12 h-12 rounded-xl object-contain bg-white p-1 shadow-sm border border-slate-100 dark:border-slate-700 shrink-0">
                         <div>
-                            <h3 class="text-xl font-bold text-slate-800 dark:text-white">Collège des Hayeffes</h3>
+                            <h3 class="text-xl font-bold text-slate-800 dark:text-white">Les Hayeffes Secondary School</h3>
                             <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-0.5">General Secondary Education | Mathematics & Sciences</p>
                             <p class="text-slate-500 dark:text-slate-400 text-sm">Mont-Saint-Guibert | September 2015 - June 2021</p>
                         </div>
