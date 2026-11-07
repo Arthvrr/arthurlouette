@@ -2,20 +2,19 @@ name: Sentinel AI Code Review
 
 on: [push]
 
-permissions:
-  contents: write
-
 jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout du code cible
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
-      - name: Exécuter Sentinel AI
+          
+      - name: Run Sentinel Analysis
         uses: Arthvrr/Sentinel@master 
         with:
+          # On passe les secrets du dépôt portfolio vers l'Action Sentinel
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          sentinel_app_id: ${{ secrets.SENTINEL_APP_ID }}
+          sentinel_private_key: ${{ secrets.SENTINEL_PRIVATE_KEY }}
