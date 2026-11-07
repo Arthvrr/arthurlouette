@@ -215,7 +215,7 @@
     <div class="py-8 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 scroller-mask">
             <div class="scroller-inner gap-16 items-center text-slate-400 dark:text-slate-500 text-xl font-bold tracking-wider uppercase">
-                <span class="flex items-center gap-2"><i class="fa-solid fa-code-commit"></i> 55+ Repositories</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-code-commit"></i> 56+ Repositories</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-laptop-code"></i> Code depuis 2020</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-users"></i> +100 Étudiants encadrés</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-tent"></i> 6 Ans Chef Scout</span>
@@ -223,7 +223,7 @@
                 <span class="flex items-center gap-2"><i class="fa-solid fa-brain"></i> Spécialisation IA</span>
                 
                 <!-- Dupliqué pour l'animation infinie -->
-                <span class="flex items-center gap-2"><i class="fa-solid fa-code-commit"></i> 55+ Repositories</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-code-commit"></i> 56+ Repositories</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-laptop-code"></i> Code depuis 2020</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-users"></i> +100 Étudiants encadrés</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-tent"></i> 6 Ans Chef Scout</span>
@@ -294,6 +294,7 @@
                             <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-lg text-xs font-semibold border border-blue-100 dark:border-blue-800/50">Docker</span>
                             <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-lg text-xs font-semibold border border-blue-100 dark:border-blue-800/50">FastAPI</span>
                             <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-lg text-xs font-semibold border border-blue-100 dark:border-blue-800/50">Supabase</span>
+                            <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-lg text-xs font-semibold border border-blue-100 dark:border-blue-800/50">Firebase</span>
                             <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-lg text-xs font-semibold border border-blue-100 dark:border-blue-800/50">SwiftUI / AppKit</span>
                             <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-lg text-xs font-semibold border border-blue-100 dark:border-blue-800/50">LLVM / Make</span>
                         </div>
@@ -333,6 +334,69 @@
             <h2 class="text-3xl font-bold mb-16 text-center text-slate-800 dark:text-white reveal">Projets Personnels</h2>
             
             <div class="space-y-24">
+
+                <!-- Sentinel -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 reveal">
+                    <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl aspect-video slider-container bg-slate-200 dark:bg-slate-800 group cursor-zoom-in" data-project="Sentinel">
+                        <img src="" alt="Sentinel 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slider-img" data-index="1">
+                        <img src="" alt="Sentinel 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img" data-index="2">
+                        <img src="" alt="Sentinel 3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img" data-index="3">
+                        <img src="" alt="Sentinel 4" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img" data-index="4">
+                        <img src="" alt="Sentinel 5" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slider-img" data-index="5">
+                        <div class="absolute inset-0 flex items-center justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity z-20">
+                            <button class="prev-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm focus:outline-none" onclick="event.stopPropagation()"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="next-btn w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-sm text-slate-900 transition shadow-sm focus:outline-none" onclick="event.stopPropagation()"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 flex flex-col justify-center">
+                        <div class="flex items-center flex-wrap gap-3 mb-2">
+                            <img src="projects-logo/sentinel.png" alt="Logo Sentinel" class="w-10 h-10 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 bg-white">
+                            <h3 class="text-3xl font-bold text-slate-800 dark:text-white">Sentinel</h3>
+                            <a href="https://github.com/Arthvrr/Sentinel" target="_blank" class="text-slate-500 hover:text-slate-800 dark:hover:text-white transition ml-2"><i class="fa-brands fa-github text-xl"></i></a>
+                        </div>
+
+                        <div class="flex items-center flex-wrap gap-3 mb-5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                            <span class="flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> Nov 2026 - Présent</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+                            <span class="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400"><i class="fa-solid fa-user-astronaut"></i> Projet Solo</span>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            Agent IA autonome qui analyse et sécurise chaque commit et Pull Request en examinant l'architecture, les diffs et l'entièreté des fichiers modifiés.
+                        </p>
+                        <ul class="space-y-2.5 mb-6 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                                <span><strong>Intégration BYOK :</strong> Utilise l'API Gemini avec votre propre clé pour garder le contrôle des requêtes et bénéficier d'un usage gratuit.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                                <span><strong>Sécurité & Code Review :</strong> Identifie les failles, bugs potentiels et pistes d'amélioration avant chaque fusion.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                                <span><strong>Déploiement Plug & Play :</strong> S'installe en 2 clics sur GitHub et accepte des instructions personnalisées via un fichier <code>SENTINEL.md</code>.</span>
+                            </li>
+                        </ul>
+
+                        <div class="mb-6 bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                            <div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-rocket text-slate-400"></i> Statut du projet (V1.0)</span>
+                                <span class="text-slate-900 dark:text-slate-200">40%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-1.5">
+                                <!-- Barre colorée en gris foncé/acier pour le côté "Sécurité/Gardien" -->
+                                <div class="bg-gradient-to-r from-slate-600 to-slate-900 dark:from-slate-400 dark:to-slate-200 h-1.5 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-code-merge"></i> CI/CD Pipeline</span>
+                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-brands fa-github"></i> GitHub Actions</span>
+                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-robot"></i> LLM Agents</span>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- BlueChip -->
                 <div class="flex flex-col md:flex-row items-center gap-12 reveal">
@@ -1416,6 +1480,7 @@
                 } else if (lower === 'projects') {
                     appendTerminalLine(`
                         <div class="space-y-1 text-xs">
+                            <div>• <a href="https://arthvrr.github.io/Sentinel/" target="_blank" class="text-blue-600 dark:text-blue-400 underline font-bold">Sentinel</a> — Agent IA qui analyse et sécurise chaque commit et chaque Pull Request.</div>
                             <div>• <a href="https://arthvrr.github.io/BlueChip/" target="_blank" class="text-blue-600 dark:text-blue-400 underline font-bold">BlueChip</a> — Application native macOS de suivi de portefeuille boursier (SwiftUI, SwiftData)</div>
                             <div>• <a href="https://github.com/Arthvrr/MyRAG" target="_blank" class="text-emerald-600 dark:text-emerald-400 underline font-bold">MyRAG</a> — Assistant IA RAG local 100% privé (Python, LangChain, Ollama)</div>
                             <div>• <a href="https://azimut-app.be" target="_blank" class="text-orange-600 dark:text-orange-400 underline font-bold">Azimut</a> — Plateforme SaaS conforme RGPD pour unités scoutes (FastAPI, Supabase)</div>
@@ -1477,6 +1542,7 @@
                     setTimeout(() => { window.location.href = targetPage; }, 400);
                 } else if (parts[0] === 'open') {
                     const projLinks = {
+                        'sentinel': 'https://arthvrr.github.io/Sentinel/',
                         'bluechip': 'https://arthvrr.github.io/BlueChip/',
                         'myrag': 'https://github.com/Arthvrr/MyRAG',
                         'azimut': 'https://azimut-app.be',
@@ -1491,7 +1557,7 @@
                         appendTerminalLine(`<span class="text-emerald-500">Ouverture de ${p} dans un nouvel onglet...</span>`);
                         window.open(projLinks[p], '_blank');
                     } else {
-                        appendTerminalLine(`<span class="text-rose-500">Utilisation : open &lt;projet&gt; (bluechip, myrag, azimut, intrinsic, blocus, mytob, stockspickeur)</span>`);
+                        appendTerminalLine(`<span class="text-rose-500">Utilisation : open &lt;projet&gt; (sentinel,bluechip, myrag, azimut, intrinsic, blocus, mytob, stockspickeur)</span>`);
                     }
                 } else if (lower === 'verify' || lower === 'cert' || lower === 'iso') {
                     appendTerminalLine(`<span class="text-emerald-500">Ouverture du certificat ISO 20022...</span>`);
